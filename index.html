@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio – Zimmermann Mël</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Zimmerman Maël</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Portfolio – Zimmermann Maël</h1>
     <nav>
-      <a href="index.html" class="active">Accueil</a>
-      <a href="competences.html">Compétences</a>
-      <a href="experiences.html">Expériences</a
-      <a href="metiers.html">Métiers</a>
+      <h1>Zimmerman Maël</h1>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#experiences">Expériences</a></li>
+        <li><a href="#matieres">Matières</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <img src="assets/photo.jpg" alt="photo de Maël" class="photo">
-      <div>
-        <h2>Je m'appelle <span class="accent">Zimmermann Maël</span></h2>
-        <p>Étudiant en <b>BTS SIO option SLAM</b>, passionné par le développement et les nouvelles technologies.</p>
-        <a href="assets/CV_Zimmermann_Maël.pdf" class="btn" download>Télécharger mon CV</a>
-      </div>
-    </div>
+  <section id="accueil" class="hero">
+    <h2>Étudiant en BTS SIO option SLAM</h2>
+    <p>Passionné par le développement et les nouvelles technologies.</p>
+    <a href="CV_Mael.pdf" download class="btn">📄 Télécharger mon CV</a>
+  </section>
+
+  <section id="competences">
+    <h2>💡 Compétences</h2>
+    <ul class="skills">
+      <li>Java / SQL / HTML / CSS / JS</li>
+      <li>Linux / Windows / Git / VS Code</li>
+      <li>RGPD / Sécurité / Analyse de conformité</li>
+    </ul>
+  </section>
+
+  <section id="experiences">
+    <h2>🧪 Expériences</h2>
+    <p>Stage chez [Nom de l’entreprise], développement d’une application interne en Java.</p>
+    <p>Projet scolaire : site web vitrine pour une association locale.</p>
+  </section>
+
+  <section id="matieres">
+    <h2>📚 Matières étudiées</h2>
+    <ul>
+      <li>Programmation orientée objet</li>
+      <li>Base de données et SQL</li>
+      <li>Cybersécurité et RGPD</li>
+      <li>Développement web</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>📬 Me contacter</h2>
+    <p>Email : <a href="mailto:mael@example.com">mael@example.com</a></p>
+    <p>LinkedIn : <a href="https://linkedin.com/in/mael">linkedin.com/in/mael</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Zimmermann Maël – BTS SIO SLAM</p>
+    <p>© 2025 Zimmerman Maël - BTS SIO SLAM</p>
   </footer>
 </body>
 </html>
-
