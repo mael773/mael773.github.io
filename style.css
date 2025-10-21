@@ -1,4 +1,3 @@
-/* Import de la police */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -57,16 +56,10 @@ nav a:hover {
   font-weight: bold;
 }
 
-section {
+main, section {
   padding: 40px 20px;
   max-width: 800px;
   margin: auto;
-}
-
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
 }
 
 footer {
