@@ -1,20 +1,29 @@
-body {
+/* ====== RESET & BASE ====== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
   background-color: #0f172a;
   color: #f1f5f9;
+  line-height: 1.6;
 }
 
+/* ====== HEADER & NAVIGATION ====== */
 header {
   background-color: #1e293b;
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav h1 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #38bdf8;
 }
 
@@ -22,49 +31,116 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: #f1f5f9;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
   color: #38bdf8;
 }
 
-.hero {
-  text-align: center;
+/* ====== SECTION FULL WIDTH ====== */
+section {
+  width: 100%;
   padding: 60px 20px;
+}
+
+.section-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ====== SECTION COLORS ====== */
+#accueil {
   background-color: #1e293b;
 }
 
-.hero h2 {
+#competences {
+  background-color: #0f172a;
+}
+
+#experiences {
+  background-color: #1e293b;
+}
+
+#certifications {
+  background-color: #0f172a;
+}
+
+
+#contact {
+  background-color: #1e293b;
+}
+
+/* ====== TITRES & TEXTES ====== */
+h2 {
   font-size: 2em;
+  margin-bottom: 20px;
   color: #38bdf8;
 }
 
+p, li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* ====== BOUTONS ====== */
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #38bdf8;
   color: #0f172a;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-main, section {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
+.btn:hover {
+  background-color: #0ea5e9;
 }
 
+/* ====== FOOTER ====== */
 footer {
   text-align: center;
   padding: 20px;
   background-color: #1e293b;
   color: #94a3b8;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .section-wrapper {
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
 }
