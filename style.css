@@ -57,24 +57,15 @@ section {
 }
 
 /* ====== SECTION COLORS ====== */
-#accueil {
-  background-color: #1e293b;
-}
-
-#competences {
-  background-color: #0f172a;
-}
-
-#experiences {
-  background-color: #1e293b;
-}
-
-#certifications {
-  background-color: #0f172a;
-}
-
+#accueil,
+#experiences,
 #contact {
   background-color: #1e293b;
+}
+
+#competences,
+#certifications {
+  background-color: #0f172a;
 }
 
 /* ====== TITRES & TEXTES ====== */
