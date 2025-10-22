@@ -45,7 +45,7 @@ nav a:hover {
   color: #38bdf8;
 }
 
-/* ====== SECTION FULL WIDTH ====== */
+/* ====== SECTIONS FULL WIDTH ====== */
 section {
   width: 100%;
   padding: 60px 20px;
@@ -72,7 +72,6 @@ section {
 #certifications {
   background-color: #0f172a;
 }
-
 
 #contact {
   background-color: #1e293b;
