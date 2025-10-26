@@ -100,7 +100,8 @@ body {
 
 /* ====== SECTIONS ====== */
 section {
-  padding: 120px 24px 60px;
+  padding: 160px 24px 60px; /* espace plus grand pour libérer le haut */
+  min-height: calc(100vh - 160px); /* pour forcer un contenu visible */
 }
 
 .container {
