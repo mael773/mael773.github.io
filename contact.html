@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Zimmermann Maël</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Zimmermann Maël</h1>
-      <ul>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="brand"><div class="logo">ZM</div><h1>Zimmermann Maël</h1></a>
+      <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="competences.html">Compétences</a></li>
         <li><a href="experiences.html">Expériences</a></li>
+        <li><a href="projets.html">Projets</a></li>
         <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h2>📬 Me contacter</h2>
-    <p>Email : <a href="mailto:mael.zimmermann@outlook.fr">zimmermannmael@gmail.com</a></p>
-    <p>LinkedIn : <a href="https://www.linkedin.com/in/ma%C3%ABl-zimmermann-88b72332b/" target="_blank">linkedin.com/in/mael-zimmermann</a></p>
-  </main>
+  <section class="fade-in">
+    <div class="container">
+      <h2>📬 Me Contacter</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="5" placeholder="Votre message..." required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Zimmermann Maël - BTS SIO SLAM</p>
-  </footer>
+  <footer><p>© 2025 Zimmermann Maël - BTS SIO SLAM</p></footer>
 </body>
 </html>
