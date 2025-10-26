@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Accueil - Zimmermann Maël</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">ZM</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
+  <header class="site-header">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="logo">ZM</span>
+        <span class="title">Zimmermann Maël</span>
+      </a>
+
+      <ul class="nav-links" role="menubar">
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="competences.html">Compétences</a></li>
         <li><a href="experiences.html">Expériences</a></li>
         <li><a href="projets.html">Projets</a></li>
@@ -23,18 +27,20 @@
   </header>
 
   <main>
-    <section id="accueil" class="fade-in">
-      <div class="container">
+    <section id="hero" class="fade-in">
+      <div class="container hero-inner">
         <h1>Zimmermann Maël</h1>
         <h2>Étudiant en BTS SIO SLAM</h2>
-        <p>Passionné par le développement et les nouvelles technologies, je conçois des solutions web et logicielles modernes.</p>
-        <a href="assets/CV_Mael.pdf" download class="btn">📄 Télécharger mon CV</a>
+        <p>Passionné par le développement web et les nouvelles technologies. Je réalise des projets en HTML, CSS, JS, PHP et frameworks modernes. Ci-dessous quelques-unes de mes compétences et projets.</p>
+        <a class="btn" href="assets/CV_Mael.pdf" download>📄 Télécharger mon CV</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Zimmermann Maël - BTS SIO SLAM</p>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Zimmermann Maël - BTS SIO SLAM</small>
+    </div>
   </footer>
 </body>
 </html>
