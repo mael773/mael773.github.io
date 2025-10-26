@@ -1,136 +1,286 @@
-/* ====== RESET & BASE ====== */
+/* ====== RESET ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ====== ROOT VARIABLES ====== */
+:root {
+  --bg: #0b1220;
+  --panel: #111827;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --card: #1e293b;
+  --radius: 12px;
+  --transition: all 0.3s ease;
+  --max-width: 1100px;
+  --font: "Poppins", "Segoe UI", Roboto, sans-serif;
+}
+
+/* ====== GLOBAL ====== */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0f172a;
-  color: #f1f5f9;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
-/* ====== HEADER & NAVIGATION ====== */
-header {
-  background-color: #1e293b;
-  padding: 20px 40px;
+/* ====== HEADER / NAV ====== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 999;
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 16px 24px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-nav h1 {
-  font-size: 1.8em;
-  color: #38bdf8;
-}
-
-nav ul {
-  list-style: none;
+.brand {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
-nav a {
-  color: #f1f5f9;
+.logo {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b1220;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.brand h1 {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: var(--transition);
 }
 
-nav a:hover {
-  color: #38bdf8;
+.nav-links a:hover,
+.nav-links a.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  color: #0b1220;
+  transform: translateY(-2px);
 }
 
-/* ====== SECTIONS FULL WIDTH ====== */
+/* ====== SECTIONS ====== */
 section {
-  width: 100%;
-  padding: 60px 20px;
+  padding: 120px 24px 60px;
 }
 
-.section-wrapper {
-  max-width: 1000px;
+.container {
+  max-width: var(--max-width);
   margin: auto;
 }
 
-/* ====== SECTION COLORS ====== */
-#accueil,
-#experiences,
-#contact {
-  background-color: #1e293b;
-}
-
-#competences,
-#certifications {
-  background-color: #0f172a;
-}
-
-/* ====== TITRES & TEXTES ====== */
 h2 {
   font-size: 2em;
+  color: var(--accent);
   margin-bottom: 20px;
-  color: #38bdf8;
 }
 
-p, li {
+p {
   font-size: 1.1em;
-  margin-bottom: 10px;
+  color: var(--text);
+  margin-bottom: 16px;
 }
 
-ul {
-  padding-left: 20px;
-}
-
-/* ====== BOUTONS ====== */
+/* ====== BUTTONS ====== */
 .btn {
   display: inline-block;
-  margin-top: 20px;
+  background: var(--accent);
+  color: #0b1220;
   padding: 12px 24px;
-  background-color: #38bdf8;
-  color: #0f172a;
-  border-radius: 8px;
+  border-radius: var(--radius);
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: var(--transition);
 }
 
 .btn:hover {
-  background-color: #0ea5e9;
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ====== HERO SECTION ====== */
+#hero {
+  background: var(--panel);
+  text-align: center;
+  padding-top: 140px;
+}
+
+#typed-text {
+  font-size: 2.2em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+/* ====== CARDS (COMPÉTENCES / PROJETS) ====== */
+.card-list {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15);
+}
+
+/* ====== TIMELINE (EXPÉRIENCES) ====== */
+.timeline {
+  list-style: none;
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+}
+
+.timeline li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline span {
+  color: var(--accent);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* ====== PROJETS GRID ====== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  text-align: left;
+}
+
+.project h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* ====== FORMULAIRE DE CONTACT ====== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--text);
+  font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--accent);
 }
 
 /* ====== FOOTER ====== */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #1e293b;
-  color: #94a3b8;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+/* ====== ANIMATIONS ====== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  header {
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  nav ul {
-    flex-direction: column;
+  .nav-links {
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
-  }
-
-  .section-wrapper {
-    padding: 0 10px;
   }
 
   h2 {
     font-size: 1.6em;
   }
 
-  p, li {
-    font-size: 1em;
+  #typed-text {
+    font-size: 1.6em;
+  }
+
+  .btn {
+    padding: 10px 18px;
   }
 }
