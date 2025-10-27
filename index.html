@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accueil - Zimmermann Maël</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <a class="brand" href="index.html">
-        <span class="logo">ZM</span>
-        <span class="title">Zimmermann Maël</span>
-      </a>
-
-      <ul class="nav-links" role="menubar">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="competences.html">Compétences</a></li>
-        <li><a href="experiences.html">Expériences</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header>
+    <div class="logo">
+      <span class="logo-circle">ZM</span>
+      <h1>Zimmermann Maël</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="competences.html">Compétences</a>
+      <a href="experiences.html">Expériences</a>
+      <a href="projets.html">Projets</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section id="hero" class="fade-in">
-      <div class="container hero-inner">
-        <h1>Zimmermann Maël</h1>
-        <h2>Étudiant en BTS SIO SLAM</h2>
-        <p>Passionné par le développement web et les nouvelles technologies. Je réalise des projets en HTML, CSS, JS, PHP et frameworks modernes. Ci-dessous quelques-unes de mes compétences et projets.</p>
-        <a class="btn" href="assets/CV_Mael.pdf" download>📄 Télécharger mon CV</a>
-      </div>
+  <!-- Fond animé -->
+  <div id="background-animation"></div>
+
+  <main class="accueil">
+    <section class="presentation">
+      <h2 class="title fade-in">Bienvenue sur mon Portfolio</h2>
+      <h3 class="subtitle fade-in-delay">Zimmermann Maël</h3>
+
+      <p class="fade-in-delay2">
+        👋 Salut, moi c'est <strong>Zimmermann Maël</strong> !<br><br>
+        Je suis actuellement étudiant au <strong>lycée polyvalent René Cassin</strong> en
+        deuxième année de <strong>BTS SIO</strong> (Services Informatiques aux Organisations)
+        option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).<br><br>
+        Cette formation me permet de me spécialiser dans le <strong>développement logiciel</strong>
+        et la <strong>création d’applications métiers</strong>. 💻
+      </p>
+
+      <a href="projets.html" class="btn">🚀 Voir mes projets</a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© 2025 Zimmermann Maël - BTS SIO SLAM</small>
-    </div>
+  <footer>
+    <p>© 2025 Zimmermann Maël - BTS SIO SLAM</p>
   </footer>
 </body>
 </html>
