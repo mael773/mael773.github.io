@@ -1,46 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compétences - Zimmermann Maël</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar">
-      <a class="brand" href="index.html"><span class="logo">ZM</span><span class="title">Zimmermann Maël</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="competences.html">Compétences</a></li>
-        <li><a href="experiences.html">Expériences</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html" class="brand"><div class="logo">ZM</div><h1>Zimmermann Maël</h1></a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="competences.html" class="active">Compétences</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="fade-in">
-      <div class="container">
-        <h2>💡 Compétences techniques</h2>
+  <main class="container">
+    <section class="skills">
+      <h2>🧠 Compétences Techniques</h2>
 
-        <div class="card card-list">
-          <ul class="skills-list">
-            <li>HTML, CSS, JavaScript, PHP, SQL</li>
-            <li>Python, Java, C/C#, C++</li>
-            <li>Laravel, Symfony, React, VueJS</li>
-            <li>Git, GitHub, GitLab, VSCode, Figma, Trello</li>
-          </ul>
+      <!-- LANGAGES -->
+      <div class="skills-category">
+        <h3>Langages</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><span>HTML</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><span>CSS</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/><span>JavaScript</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"/><span>PHP</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/><span>Java</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/><span>C++</span></div>
+        </div>
+      </div>
+
+      <!-- FRAMEWORKS -->
+      <div class="skills-category">
+        <h3>Frameworks & Librairies</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/><span>React</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"/><span>Vue.js</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"/><span>Laravel</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg"/><span>Symfony</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/><span>Bootstrap</span></div>
+        </div>
+      </div>
+
+      <!-- BASE DE DONNÉES -->
+      <div class="skills-category">
+        <h3>Base de Données</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/><span>MySQL</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"/><span>SQLite</span></div>
+        </div>
+      </div>
+
+      <!-- CYBERSÉCURITÉ -->
+      <div class="skills-category">
+        <h3>Cybersécurité</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"/><span>Linux</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"/><span>Bash</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/><span>Docker</span></div>
+        </div>
+      </div>
+
+      <!-- OUTILS -->
+      <div class="skills-category">
+        <h3>Outils & Autres</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/><span>Git</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/><span>GitHub</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/><span>Figma</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/><span>VS Code</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"/><span>Trello</span></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container"><small>© 2025 Zimmermann Maël - BTS SIO SLAM</small></div>
+  <footer>
+    <p>© 2025 Zimmermann Maël - BTS SIO SLAM</p>
   </footer>
 </body>
 </html>
