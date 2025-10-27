@@ -21,25 +21,28 @@ document.addEventListener("DOMContentLoaded", () => {
   cards.forEach(card => observer.observe(card));
 
   /* -----------------------------
-     Bouton retour en haut (optionnel)
+     Bouton retour en haut
   ----------------------------- */
   const scrollTopBtn = document.createElement("button");
   scrollTopBtn.textContent = "↑";
   scrollTopBtn.id = "scrollTopBtn";
   document.body.appendChild(scrollTopBtn);
 
-  scrollTopBtn.style.position = "fixed";
-  scrollTopBtn.style.bottom = "25px";
-  scrollTopBtn.style.right = "25px";
-  scrollTopBtn.style.background = "var(--accent)";
-  scrollTopBtn.style.color = "var(--bg-dark)";
-  scrollTopBtn.style.border = "none";
-  scrollTopBtn.style.borderRadius = "50%";
-  scrollTopBtn.style.width = "40px";
-  scrollTopBtn.style.height = "40px";
-  scrollTopBtn.style.cursor = "pointer";
-  scrollTopBtn.style.display = "none";
-  scrollTopBtn.style.transition = "0.3s";
+  Object.assign(scrollTopBtn.style, {
+    position: "fixed",
+    bottom: "25px",
+    right: "25px",
+    background: "var(--accent)",
+    color: "var(--bg-dark)",
+    border: "none",
+    borderRadius: "50%",
+    width: "40px",
+    height: "40px",
+    cursor: "pointer",
+    display: "none",
+    transition: "0.3s",
+    zIndex: "100",
+  });
 
   scrollTopBtn.addEventListener("mouseenter", () => {
     scrollTopBtn.style.transform = "scale(1.1)";
@@ -49,11 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollTopBtn.style.display = "block";
-    } else {
-      scrollTopBtn.style.display = "none";
-    }
+    scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
   });
 
   scrollTopBtn.addEventListener("click", () => {
