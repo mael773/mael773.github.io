@@ -247,3 +247,91 @@ footer {
     padding: 30px 20px;
   }
 }
+
+/* =========================================================
+   🧍 SECTION À PROPOS
+   ========================================================= */
+
+#apropos {
+  padding: 120px 20px 80px;
+  background: var(--bg-dark);
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  color: var(--text-light);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.presentation, .bts {
+  margin-bottom: 60px;
+}
+
+.presentation h3,
+.bts h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.presentation p,
+.bts p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* ---------- OPTIONS BTS ---------- */
+.options {
+  display: grid;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.option {
+  background-color: var(--bg-light);
+  padding: 25px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+}
+
+.option h4 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.option p {
+  color: var(--text-muted);
+}
+
+/* Option sélectionnée (SLAM) */
+.option.selected {
+  border: 1px solid var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.option.selected h4 {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.option.selected p {
+  color: #cbd5e1;
+}
+
