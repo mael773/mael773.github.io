@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil - Zimmermann Maël</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos – Zimmermann Maël</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ======= HEADER ======= -->
   <header>
     <div class="logo">
-      <span class="logo-circle">ZM</span>
+      <div class="logo-circle">ZM</div>
       <h1>Zimmermann Maël</h1>
     </div>
     <nav>
@@ -23,35 +24,66 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="hero">
-    <div class="hero-content">
-      <h1 class="hero-name">Zimmermann Maël</h1>
-      <h2 class="hero-title">Bienvenue sur mon Portfolio</h2>
-      <a href="#about" class="scroll-down">↓ En savoir plus</a>
+  <!-- ======= SECTION À PROPOS ======= -->
+  <section id="apropos">
+    <div class="container">
+
+      <h2 class="section-title">À propos 💬</h2>
+
+      <!-- Présentation -->
+      <div class="presentation">
+        <h3>Présentation</h3>
+        <p>👋 Salut, moi c’est <strong>Zimmermann Maël</strong> !</p>
+        <p>
+          Je suis actuellement étudiant au <strong>lycée polyvalent René Cassin</strong> 
+          en deuxième année de <strong>BTS SIO</strong> (Services Informatiques aux Organisations),
+          option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).
+        </p>
+        <p>
+          Passionné par le développement, j’aime concevoir, apprendre et améliorer des solutions logicielles
+          qui répondent à des besoins concrets.
+        </p>
+      </div>
+
+      <!-- BTS SIO -->
+      <div class="bts">
+        <h3>Qu’est-ce que le BTS SIO 🎓 ?</h3>
+        <p>
+          Le <strong>BTS SIO</strong> (Services Informatiques aux Organisations) est une formation
+          en deux ans qui prépare aux métiers de l’informatique dans les domaines du développement,
+          de l’administration réseau et du support utilisateur.
+        </p>
+
+        <div class="options">
+          <div class="option">
+            <h4>Option SISR 🖧</h4>
+            <p>
+              L’option <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux)
+              forme des spécialistes des réseaux et des systèmes informatiques.  
+              Les étudiants apprennent à installer, configurer, administrer et sécuriser
+              les réseaux et serveurs d’une organisation.
+            </p>
+          </div>
+
+          <div class="option selected">
+            <h4>Option SLAM 💻 (celle que j’ai choisie)</h4>
+            <p>
+              L’option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers)
+              est orientée vers le développement d’applications web et logicielles.  
+              Elle forme des développeurs capables de concevoir des sites, des applications métiers
+              et des bases de données répondant aux besoins des entreprises.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <div class="about-container">
-      <h2>À propos de moi</h2>
-      <p>
-        👋 Salut, moi c’est <strong>Zimmermann Maël</strong> !<br><br>
-        Je suis actuellement étudiant au <strong>lycée polyvalent René Cassin</strong> en deuxième année de 
-        <strong>BTS SIO</strong> (Services Informatiques aux Organisations), option 
-        <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).<br><br>
-        Passionné par le développement web et logiciel, j’aime concevoir des 
-        <strong>interfaces modernes, fonctionnelles et épurées</strong>. 💻<br><br>
-        Mon objectif est de continuer à évoluer dans le monde du développement 
-        et de la cybersécurité tout en créant des projets concrets et utiles.
-      </p>
-      <a href="projets.html" class="btn">🚀 Voir mes projets</a>
-    </div>
-  </section>
-
+  <!-- ======= FOOTER ======= -->
   <footer>
-    <p>© 2025 Zimmermann Maël - Portfolio</p>
+    <p>© 2025 Zimmermann Maël - BTS SIO SLAM</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
