@@ -8,6 +8,8 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="animated-bg" aria-hidden="true"></div>
+
   <header class="site-header">
     <nav class="navbar">
       <a class="brand" href="index.html"><span class="logo">ZM</span><span class="title">Zimmermann Maël</span></a>
@@ -15,7 +17,7 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="competences.html">Compétences</a></li>
         <li><a href="experiences.html">Expériences</a></li>
-        <li><a href="projets.html">Projets</a></li>
+        <li><a href="projets.html" class="active">Projets</a></li>
         <li><a href="certifications.html">Certifications</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -28,45 +30,31 @@
         <h2>🚀 Mes projets</h2>
 
         <div class="projects-grid">
-          <!-- Projet 1 -->
           <article class="project-card">
-            <div class="project-media" style="background-image: url('assets/proj1.jpg');"></div>
-            <div class="project-body">
-              <h3>Portfolio Personnel</h3>
-              <p>Site responsive en HTML/CSS/JS présentant mon CV, projets et contact.</p>
-              <div class="meta">Stack : HTML • CSS • JavaScript</div>
-              <div style="margin-top:12px;">
-                <a class="btn" href="https://github.com/" target="_blank" rel="noopener">Voir le code</a>
-              </div>
-            </div>
+            <img src="assets/proj1.jpg" alt="Portfolio">
+            <h3>Portfolio personnel</h3>
+            <p>Site responsive en HTML/CSS/JS présentant mon CV et projets.</p>
+            <p class="meta">Stack : HTML • CSS • JavaScript</p>
+            <a class="btn" href="https://github.com/" target="_blank" rel="noopener">Voir le code</a>
           </article>
 
-          <!-- Projet 2 -->
           <article class="project-card">
-            <div class="project-media" style="background-image: url('assets/proj2.jpg');"></div>
-            <div class="project-body">
-              <h3>ToDo App</h3>
-              <p>Application de gestion de tâches avec stockage local et filtres.</p>
-              <div class="meta">Stack : JavaScript • LocalStorage</div>
-              <div style="margin-top:12px;">
-                <a class="btn" href="#" target="_blank" rel="noopener">Démo</a>
-              </div>
-            </div>
+            <img src="assets/proj2.jpg" alt="ToDo App">
+            <h3>ToDo App</h3>
+            <p>Application de gestion de tâches avec stockage local.</p>
+            <p class="meta">Stack : JavaScript • LocalStorage</p>
+            <a class="btn" href="#" target="_blank" rel="noopener">Démo</a>
           </article>
 
-          <!-- Projet 3 -->
           <article class="project-card">
-            <div class="project-media" style="background-image: url('assets/proj3.jpg');"></div>
-            <div class="project-body">
-              <h3>Gestion Utilisateurs (PHP)</h3>
-              <p>Prototype d'administration d'utilisateurs en PHP/MySQL (CRUD).</p>
-              <div class="meta">Stack : PHP • MySQL • Bootstrap</div>
-              <div style="margin-top:12px;">
-                <a class="btn" href="#" target="_blank" rel="noopener">Voir le projet</a>
-              </div>
-            </div>
+            <img src="assets/proj3.jpg" alt="Gestion utilisateurs">
+            <h3>Gestion Utilisateurs (PHP)</h3>
+            <p>Prototype d'administration en PHP/MySQL (CRUD).</p>
+            <p class="meta">Stack : PHP • MySQL</p>
+            <a class="btn" href="#" target="_blank" rel="noopener">Voir le projet</a>
           </article>
         </div>
+
       </div>
     </section>
   </main>
