@@ -8,6 +8,8 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="animated-bg" aria-hidden="true"></div>
+
   <header class="site-header">
     <nav class="navbar">
       <a class="brand" href="index.html"><span class="logo">ZM</span><span class="title">Zimmermann Maël</span></a>
@@ -17,7 +19,7 @@
         <li><a href="experiences.html">Expériences</a></li>
         <li><a href="projets.html">Projets</a></li>
         <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -27,17 +29,22 @@
       <div class="container">
         <h2>📬 Me contacter</h2>
 
-        <form class="contact-form" onsubmit="return false;">
+        <form class="contact-form">
           <input type="text" name="name" placeholder="Nom" required />
           <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
+          <textarea name="message" rows="7" placeholder="Votre message..." required></textarea>
           <div style="display:flex;gap:12px;justify-content:center;margin-top:6px;">
             <button type="submit" class="btn">Envoyer</button>
             <a class="btn" href="mailto:zimmermannmael@gmail.com">Envoyer par mail</a>
           </div>
         </form>
 
-        <p style="margin-top:18px;color:#94a3b8;text-align:center;">LinkedIn : <a href="https://www.linkedin.com/in/ma%C3%ABl-zimmermann-88b72332b/" target="_blank" rel="noopener" style="color:#cfeffd;">linkedin.com/in/mael-zimmermann</a></p>
+        <p style="margin-top:18px;color:#94a3b8;text-align:center;">
+          LinkedIn :
+          <a href="https://www.linkedin.com/in/ma%C3%ABl-zimmermann-88b72332b/" target="_blank" rel="noopener" style="color:#cfeffd;">
+            linkedin.com/in/mael-zimmermann
+          </a>
+        </p>
       </div>
     </section>
   </main>
