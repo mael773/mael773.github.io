@@ -1,16 +1,17 @@
 /* =========================================================
-   script.js - global improvements
-   - set active nav
-   - smooth scroll with header offset
-   - reveal on scroll (staggered)
-   - back-to-top
-   - contact form handling
+   ✨ script.js - Portfolio (global)
+   - active nav
+   - smooth scroll
+   - reveal on scroll (fade-in, cards)
+   - back-to-top button
+   - basic contact form handling (client-side)
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
+  /* helper: select all */
   const $all = (sel, root = document) => Array.from((root || document).querySelectorAll(sel));
 
-  /* ---------------- active nav ---------------- */
+  /* ===== active navigation based on filename ===== */
   (function setActiveNav() {
     const path = window.location.pathname.split("/").pop() || "index.html";
     $all(".nav-links a").forEach(a => {
@@ -20,45 +21,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-  /* ---------------- smooth anchors with header offset ---------------- */
-  (function smoothAnchorsWithOffset() {
-    const navBar = document.querySelector(".navbar");
-    const getOffset = () => (navBar ? navBar.getBoundingClientRect().height + 8 : 72);
-
+  /* ===== smooth scroll for anchors ===== */
+  (function smoothAnchors() {
     $all('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", (ev) => {
-        const href = a.getAttribute("href");
-        if (!href || href === "#") return;
-        const target = document.querySelector(href);
-        if (!target) return;
-        ev.preventDefault();
-        const offset = getOffset();
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: "smooth" });
-        // accessibility focus
-        setTimeout(() => {
-          target.setAttribute("tabindex", "-1");
-          target.focus({preventScroll:true});
-        }, 600);
+      a.addEventListener("click", function (e) {
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       });
     });
   })();
 
-  /* ---------------- reveal on scroll ---------------- */
+  /* ===== reveal on scroll (IntersectionObserver) ===== */
   (function revealOnScroll() {
-    const revealSelector = ".fade-in, .skill-card, .project-card, .cert-card, .experience-card, .option, .timeline-content, .timeline-dot";
-    const items = $all(revealSelector);
+    const selector = ".fade-in, .skill-card, .project-card, .cert-card, .experience-card, .option";
+    const items = $all(selector);
     if (!items.length) return;
 
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         const el = entry.target;
-
-        // if element is a grid container, stagger reveal children
-        if (el.matches(".skills-grid, .projects-grid, .options")) {
-          Array.from(el.children).forEach((child, i) => {
-            setTimeout(() => child.classList.add("visible"), i * 80);
+        // reveal grid children with stagger if parent is grid
+        if (el.matches(".skills-grid") || el.matches(".projects-grid") || el.matches(".options")) {
+          const children = Array.from(el.children);
+          children.forEach((c, i) => {
+            setTimeout(() => c.classList.add("visible"), i * 80);
           });
         } else {
           el.classList.add("visible");
@@ -67,62 +57,81 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, { threshold: 0.15 });
 
-    // Observe containers first
+    // Observe grids (so we can stagger children)
     $all(".skills-grid, .projects-grid, .options").forEach(g => observer.observe(g));
-    // Observe individual nodes (skip children of handled grids)
-    $all(revealSelector).forEach(el => {
-      if (el.closest(".skills-grid, .projects-grid, .options")) return;
-      observer.observe(el);
-    });
+    // Observe other revealable nodes
+    $all(".fade-in, .skill-card, .project-card, .cert-card, .experience-card, .option")
+      .forEach(el => {
+        // skip if child of handled grid
+        if (el.closest(".skills-grid, .projects-grid, .options")) return;
+        observer.observe(el);
+      });
   })();
 
-  /* ---------------- back to top button ---------------- */
+  /* ===== back to top button ===== */
   (function backToTop() {
     if (document.getElementById("scrollTopBtn")) return;
     const btn = document.createElement("button");
     btn.id = "scrollTopBtn";
-    btn.setAttribute("aria-label", "Retour en haut");
-    btn.textContent = "↑";
+    btn.innerText = "↑";
     Object.assign(btn.style, {
-      position: "fixed", right: "22px", bottom: "22px", width: "46px", height: "46px",
+      position: "fixed", right: "20px", bottom: "20px", width: "44px", height: "44px",
       borderRadius: "50%", border: "none", cursor: "pointer", display: "none",
-      alignItems: "center", justifyContent: "center",
-      background: getComputedStyle(document.documentElement).getPropertyValue('--accent') || "#00aaff",
-      color: "#041418", zIndex: 99999, boxShadow: "0 8px 20px rgba(0,0,0,0.25)"
+      zIndex: 9999, background: getComputedStyle(document.documentElement).getPropertyValue('--accent') || "#00aaff",
+      color: "#041418"
     });
     document.body.appendChild(btn);
     btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-    window.addEventListener("scroll", () => { btn.style.display = window.scrollY > 300 ? "flex" : "none"; });
+    window.addEventListener("scroll", () => btn.style.display = window.scrollY > 300 ? "flex" : "none");
   })();
 
-  /* ---------------- simple contact form handling ---------------- */
+  /* ===== contact form handling (client-side only) ===== */
   (function contactForm() {
     const form = document.querySelector(".contact-form");
     if (!form) return;
-    const showNotice = (msg, ok = true) => {
+
+    const notice = (msg, ok = true) => {
       const n = document.createElement("div");
+      n.className = "contact-notice";
       n.textContent = msg;
       Object.assign(n.style, {
-        position: "fixed", right: "18px", bottom: "92px", padding: "12px 14px",
+        position: "fixed",
+        right: "20px",
+        bottom: "90px",
+        padding: "12px 16px",
         background: ok ? "rgba(56,189,248,0.95)" : "rgba(220,53,69,0.95)",
-        color: "#04202b", borderRadius: "8px", zIndex: 100000
+        color: "#04202b",
+        borderRadius: "8px",
+        zIndex: 10000,
+        boxShadow: "0 8px 20px rgba(0,0,0,0.3)"
       });
       document.body.appendChild(n);
-      setTimeout(() => n.style.opacity = "0", 2400);
-      setTimeout(() => n.remove(), 2800);
+      setTimeout(() => n.style.opacity = "0", 2500);
+      setTimeout(() => n.remove(), 3000);
     };
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const data = new FormData(form);
-      const n = (data.get("name") || "").toString().trim();
-      const em = (data.get("email") || "").toString().trim();
-      const m = (data.get("message") || "").toString().trim();
-      if (!n || !em || !m) return showNotice("Veuillez remplir tous les champs.", false);
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!re.test(em)) return showNotice("Adresse email invalide.", false);
+      const formData = new FormData(form);
+      const name = (formData.get("name") || "").toString().trim();
+      const email = (formData.get("email") || "").toString().trim();
+      const message = (formData.get("message") || "").toString().trim();
+
+      if (!name || !email || !message) {
+        notice("Veuillez remplir tous les champs.", false);
+        return;
+      }
+
+      // basic email pattern
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        notice("Adresse email invalide.", false);
+        return;
+      }
+
+      // Simulate sending (client-side only)
       form.reset();
-      showNotice("Message envoyé — merci !", true);
+      notice("Message envoyé — merci !", true);
     });
   })();
 
