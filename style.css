@@ -326,3 +326,150 @@ section h2 {
   .options { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; }
 }
+
+/* =========================
+   TIMELINES RÉVISÉES
+   (remplacer l'ancien bloc timeline par celui-ci)
+   ========================= */
+
+.timeline-wrapper {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+/* timeline container: center it and keep left line column */
+.timeline {
+  position: relative;
+  padding-left: 68px; /* space for vertical line and dots */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(0,170,255,0.18), rgba(0,170,255,0.06));
+  border-radius: 3px;
+  z-index: 0;
+}
+
+/* single item */
+.timeline-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+/* dot */
+.timeline-dot {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background: rgba(0,170,255,0.06);
+  border: 1px solid rgba(0,170,255,0.10);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* content box */
+.timeline-box {
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 18px 18px;
+  border: 1px solid rgba(255,255,255,0.03);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+/* hover */
+.timeline-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,170,255,0.06);
+  background: rgba(0,170,255,0.03);
+}
+
+/* headings & meta */
+.timeline-box h3 {
+  margin: 0 0 8px 0;
+  color: var(--accent);
+  font-size: 1.03rem;
+  font-weight: 700;
+}
+
+.timeline-box .meta {
+  margin: 0 0 8px 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.timeline-box p {
+  margin: 0;
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+/* school variant - slightly different dot color */
+.timeline-school .timeline-dot {
+  background: rgba(77,210,255,0.05);
+  border-color: rgba(77,210,255,0.10);
+}
+
+/* Reveal helpers for IntersectionObserver (script.js toggles .visible) */
+.timeline-dot, .timeline-box {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.timeline-dot.visible, .timeline-box.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 840px) {
+  .timeline {
+    padding-left: 56px;
+    gap: 18px;
+  }
+  .timeline::before { left: 22px; }
+  .timeline-dot { width: 40px; height: 40px; font-size: 16px; }
+  .timeline-box { padding: 14px; }
+  .timeline-wrapper { padding: 0 12px; }
+}
+
+@media (max-width: 520px) {
+  .timeline {
+    padding-left: 42px;
+  }
+  .timeline::before { left: 18px; }
+  .timeline-dot { width: 36px; height: 36px; font-size: 15px; }
+  .timeline-box { padding: 12px; font-size: 0.95rem; }
+}
