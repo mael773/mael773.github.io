@@ -1,137 +1,138 @@
 /* =========================================================
-   ✨ script.js - Portfolio (global)
-   - active nav
-   - smooth scroll
-   - reveal on scroll (fade-in, cards)
-   - back-to-top button
-   - basic contact form handling (client-side)
+   script.js - Fiable & non-bloquant
+   - active nav (robuste)
+   - smooth scroll with offset (navbar)
+   - reveal on scroll (adds .visible, non-mandatory)
+   - back-to-top, simple contact handler
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* helper: select all */
   const $all = (sel, root = document) => Array.from((root || document).querySelectorAll(sel));
 
-  /* ===== active navigation based on filename ===== */
+  /* -------------------------
+     Active navigation (robust)
+     - compares href filename or full href match
+  ------------------------- */
   (function setActiveNav() {
-    const path = window.location.pathname.split("/").pop() || "index.html";
+    const current = window.location.href;
     $all(".nav-links a").forEach(a => {
-      const href = (a.getAttribute("href") || "").split("/").pop();
+      const href = a.getAttribute("href");
       if (!href) return;
-      a.classList.toggle("active", href === path || (path === "" && href === "index.html"));
+      // normalize relative paths: take last segment
+      const hrefName = href.split("/").pop();
+      const isActive = current.endsWith(hrefName) || current.includes(hrefName) || (hrefName === "index.html" && (current.endsWith("/") || current.endsWith("index.html")));
+      a.classList.toggle("active", isActive);
     });
   })();
 
-  /* ===== smooth scroll for anchors ===== */
-  (function smoothAnchors() {
+  /* -------------------------
+     Smooth anchors with navbar offset
+  ------------------------- */
+  (function anchorsWithOffset() {
+    const nav = document.querySelector(".navbar");
+    const navHeight = () => (nav ? nav.getBoundingClientRect().height : 64);
+
     $all('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", function (e) {
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      });
+      a.addEventListener("click", (e) => {
+        const targetSelector = a.getAttribute("href");
+        if (!targetSelector || targetSelector === "#") return;
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
+        e.preventDefault();
+        const offset = navHeight() + 12; // small gap
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+        // focus for accessibility
+        setTimeout(() => {
+          target.setAttribute("tabindex", "-1");
+          target.focus({ preventScroll: true });
+        }, 600);
+      }, { passive: true });
     });
   })();
 
-  /* ===== reveal on scroll (IntersectionObserver) ===== */
+  /* -------------------------
+     Reveal on scroll (non-blocking)
+     - will add .visible to elements in view
+     - if JS fails, content remains visible (no global hiding in CSS)
+  ------------------------- */
   (function revealOnScroll() {
-    const selector = ".fade-in, .skill-card, .project-card, .cert-card, .experience-card, .option";
-    const items = $all(selector);
+    const selectors = [
+      ".fade-in",
+      ".skill-card",
+      ".project-card",
+      ".cert-card",
+      ".experience-card",
+      ".option",
+      ".timeline-box",
+      ".timeline-dot"
+    ];
+    const items = $all(selectors.join(","));
     if (!items.length) return;
 
+    // Observer with a small negative rootMargin so sections reveal slightly earlier
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        // reveal grid children with stagger if parent is grid
-        if (el.matches(".skills-grid") || el.matches(".projects-grid") || el.matches(".options")) {
-          const children = Array.from(el.children);
-          children.forEach((c, i) => {
-            setTimeout(() => c.classList.add("visible"), i * 80);
-          });
-        } else {
-          el.classList.add("visible");
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
         }
-        obs.unobserve(el);
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
 
-    // Observe grids (so we can stagger children)
-    $all(".skills-grid, .projects-grid, .options").forEach(g => observer.observe(g));
-    // Observe other revealable nodes
-    $all(".fade-in, .skill-card, .project-card, .cert-card, .experience-card, .option")
-      .forEach(el => {
-        // skip if child of handled grid
-        if (el.closest(".skills-grid, .projects-grid, .options")) return;
-        observer.observe(el);
-      });
+    items.forEach(it => observer.observe(it));
   })();
 
-  /* ===== back to top button ===== */
+  /* -------------------------
+     Back to top button
+  ------------------------- */
   (function backToTop() {
     if (document.getElementById("scrollTopBtn")) return;
     const btn = document.createElement("button");
     btn.id = "scrollTopBtn";
-    btn.innerText = "↑";
+    btn.setAttribute("aria-label", "Retour en haut");
+    btn.textContent = "↑";
     Object.assign(btn.style, {
-      position: "fixed", right: "20px", bottom: "20px", width: "44px", height: "44px",
+      position: "fixed", right: "18px", bottom: "18px", width: "44px", height: "44px",
       borderRadius: "50%", border: "none", cursor: "pointer", display: "none",
-      zIndex: 9999, background: getComputedStyle(document.documentElement).getPropertyValue('--accent') || "#00aaff",
+      zIndex: 99999, background: getComputedStyle(document.documentElement).getPropertyValue('--accent') || "#00aaff",
       color: "#041418"
     });
     document.body.appendChild(btn);
     btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-    window.addEventListener("scroll", () => btn.style.display = window.scrollY > 300 ? "flex" : "none");
+    window.addEventListener("scroll", () => { btn.style.display = window.scrollY > 320 ? "flex" : "none"; });
   })();
 
-  /* ===== contact form handling (client-side only) ===== */
+  /* -------------------------
+     Contact form (client-side)
+  ------------------------- */
   (function contactForm() {
     const form = document.querySelector(".contact-form");
     if (!form) return;
-
-    const notice = (msg, ok = true) => {
+    const showFlash = (msg, ok = true) => {
       const n = document.createElement("div");
-      n.className = "contact-notice";
       n.textContent = msg;
       Object.assign(n.style, {
-        position: "fixed",
-        right: "20px",
-        bottom: "90px",
-        padding: "12px 16px",
+        position: "fixed", right: "18px", bottom: "92px", padding: "10px 14px",
         background: ok ? "rgba(56,189,248,0.95)" : "rgba(220,53,69,0.95)",
-        color: "#04202b",
-        borderRadius: "8px",
-        zIndex: 10000,
-        boxShadow: "0 8px 20px rgba(0,0,0,0.3)"
+        color: "#04202b", borderRadius: "8px", zIndex: 100000
       });
       document.body.appendChild(n);
-      setTimeout(() => n.style.opacity = "0", 2500);
-      setTimeout(() => n.remove(), 3000);
+      setTimeout(() => n.style.opacity = "0", 2200);
+      setTimeout(() => n.remove(), 2600);
     };
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const formData = new FormData(form);
-      const name = (formData.get("name") || "").toString().trim();
-      const email = (formData.get("email") || "").toString().trim();
-      const message = (formData.get("message") || "").toString().trim();
-
-      if (!name || !email || !message) {
-        notice("Veuillez remplir tous les champs.", false);
-        return;
-      }
-
-      // basic email pattern
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        notice("Adresse email invalide.", false);
-        return;
-      }
-
-      // Simulate sending (client-side only)
+      const fd = new FormData(form);
+      const name = (fd.get("name") || "").toString().trim();
+      const email = (fd.get("email") || "").toString().trim();
+      const message = (fd.get("message") || "").toString().trim();
+      if (!name || !email || !message) return showFlash("Veuillez remplir tous les champs.", false);
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!re.test(email)) return showFlash("Email invalide.", false);
       form.reset();
-      notice("Message envoyé — merci !", true);
+      showFlash("Message envoyé — merci !", true);
     });
   })();
 
