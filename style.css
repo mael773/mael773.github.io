@@ -321,6 +321,7 @@ section h2 {
   }
 }
 
+
 /* =========================
    TIMELINES (Expériences)
    ========================= */
@@ -456,6 +457,3 @@ section h2 {
 
 /* optionally: add slight spacing between the two timelines sections */
 section + section { margin-top: 10px; }
-
-
-
