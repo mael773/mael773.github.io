@@ -1,66 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projets - Zimmermann Maël</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <div class="animated-bg" aria-hidden="true"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projets — Portfolio Zimmermann Maël</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="brand" href="index.html"><span class="logo">ZM</span><span class="title">Zimmermann Maël</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="competences.html">Compétences</a></li>
-        <li><a href="experiences.html">Expériences</a></li>
-        <li><a href="projets.html" class="active">Projets</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">MZ</span>
+          <span>Maël Zimmermann</span>
+        </a>
 
-  <main>
-    <section class="fade-in">
-      <div class="container">
-        <h2>Mes projets</h2>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <img src="assets/proj1.jpg" alt="Portfolio">
-            <h3>Portfolio personnel</h3>
-            <p>Site responsive en HTML/CSS/JS présentant mon CV et projets.</p>
-            <p class="meta">Stack : HTML • CSS • JavaScript</p>
-            <a class="btn" href="https://github.com/" target="_blank" rel="noopener">Voir le code</a>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/proj2.jpg" alt="un projet">
-            <h3>ToDo App</h3>
-            <p></p>
-            <p class="meta">Stack : </p>
-            <a class="btn" href="#" target="_blank" rel="noopener">Démo</a>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/proj3.jpg" alt="Gestion utilisateurs">
-            <h3>Gestion Utilisateurs (PHP)</h3>
-            <p>Prototype d'administration en PHP/MySQL (CRUD).</p>
-            <p class="meta">Stack : PHP • MySQL</p>
-            <a class="btn" href="#" target="_blank" rel="noopener">Voir le projet</a>
-          </article>
-        </div>
-
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="competences.html">Compétences</a>
+          <a href="experiences.html">Expériences</a>
+          <a href="projets.html" aria-current="page">Projets</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container"><small>© 2025 Zimmermann Maël - BTS SIO SLAM</small></div>
-  </footer>
-</body>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title fade">Projets réaliser </h1>
+
+          <div class="grid-2">
+            <article class="card fade" style="grid-column: span 2">
+              <div class="card-inner">
+                <h2 class="card-title">Portfolio — Maël Zimmermann</h2>
+                <p>
+                  Site personnel présentant mon parcours (BTS SIO SLAM), mes expériences, compétences, certifications et
+                  coordonnées. Objectif : un rendu moderne, lisible et rapide, avec navigation fluide et animations légères.
+                </p>
+                <ul class="list">
+                  <li>Stack : HTML, CSS, JavaScript (vanilla) + animations IntersectionObserver.</li>
+                  <li>Accessibilité : balises sémantiques, aria-current, background décoratif masqué.</li>
+                  <li>Performances : léger, sans framework, assets externes minimisés.</li>
+                </ul>
+                <div class="cta-row" style="margin-top: var(--space-3)">
+                  <a class="button" href="index.html">Voir le site</a>
+                  <a class="button primary" href="cv-mael-zimmermann.pdf" download>Mon CV</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card fade" style="grid-column: span 2">
+              <div class="card-inner">
+                <h2 class="card-title">GED — Gestion Électronique de Documents</h2>
+                <p>
+                  Application de gestion documentaire permettant de stocker, organiser et partager des fichiers avec des
+                  droits d’accès simples. Objectif : centraliser les documents pour une petite équipe sans dépendre d’un
+                  service cloud tiers. Projet réalisé en stage chez Oxycad (Wiwersheim) — Janvier–Février 2026.
+                </p>
+                <ul class="list">
+                  <li>Stack : PHP, MySQL, HTML/CSS, un peu de JavaScript pour les interactions.</li>
+                  <li>Fonctionnalités : upload, arborescence basique, recherche, rôles/utilisateurs.</li>
+                  <li>Sécurité : 2FA, hashage + salage des mots de passe, contrôles d’accès renforcés.</li>
+                  <li>En cours : finition UI et amélioration des contrôles d’accès.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Zimmermann Maël</span>
+        <a href="contact.html">Me contacter</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
