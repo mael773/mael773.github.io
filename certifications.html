@@ -1,57 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Certifications - Zimmermann Maël</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <div class="animated-bg" aria-hidden="true"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Certifications — Portfolio Zimmermann Maël</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="brand" href="index.html"><span class="logo">ZM</span><span class="title">Zimmermann Maël</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="competences.html">Compétences</a></li>
-        <li><a href="experiences.html">Expériences</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="certifications.html" class="active">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">MZ</span>
+          <span>Maël Zimmermann</span>
+        </a>
 
-  <main>
-    <section class="fade-in">
-      <div class="container">
-        <h2>📜 Certifications & Attestations</h2>
-
-        <div class="projects-grid">
-          <article class="cert-card">
-            <h3>PIX</h3>
-            <p>Certification nationale des compétences numériques.</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>RGPD</h3>
-            <p>Attestation de sensibilisation à la protection des données.</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>SecNumAcadémie (ANSSI)</h3>
-            <p>Formation en cybersécurité par l'ANSSI.</p>
-          </article>
-        </div>
-
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="competences.html">Compétences</a>
+          <a href="experiences.html">Expériences</a>
+          <a href="projets.html">Projets</a>
+          <a href="certifications.html" aria-current="page">Certifications</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container"><small>© 2025 Zimmermann Maël - BTS SIO SLAM</small></div>
-  </footer>
-</body>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title fade">Certifications</h1>
+
+          <div class="grid-2">
+            <div class="card fade">
+              <div class="card-inner">
+                <div class="cert-header">
+                  <img
+                    class="cert-logo"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='18' fill='%23f5f8ff'/><linearGradient id='pigrad' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%234c8bff'/><stop offset='100%' stop-color='%232d6bff'/></linearGradient><text x='30' y='78' font-family='Inter,Arial,sans-serif' font-size='70' font-weight='700' fill='url(%23pigrad)'>pi</text><text x='72' y='78' font-family='Inter,Arial,sans-serif' font-size='70' font-weight='700' fill='%23f6a700'>x</text></svg>"
+                    alt="Logo PIX"
+                  />
+                  <div>
+                    <h2 class="card-title">PIX</h2>
+                    <p class="cert-meta">Certification française de compétences numériques.</p>
+                  </div>
+                </div>
+                <ul class="list">
+                  <li>Évalue et certifie les compétences numériques (information, création, sécurité, collaboration).</li>
+                  <li>Parcours adaptatif avec mise en situation concrète.</li>
+                  <li>Reconnaissance officielle (Éducation nationale / État).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card fade">
+              <div class="card-inner">
+                <div class="cert-header">
+                  <img
+                    class="cert-logo"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><circle cx='60' cy='60' r='54' fill='%231c3faa'/><rect x='38' y='50' width='44' height='34' rx='6' fill='white'/><rect x='50' y='42' width='20' height='12' rx='4' fill='white'/><path d='M46 58h28v10H46z' fill='%231c3faa'/><text x='60' y='82' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='700' fill='%231c3faa' text-anchor='middle'>RGPD</text></svg>"
+                    alt="Logo RGPD"
+                  />
+                  <div>
+                    <h2 class="card-title">Sensibilisation RGPD</h2>
+                    <p class="cert-meta">Principes clés de protection des données.</p>
+                  </div>
+                </div>
+                <ul class="list">
+                  <li>Connaissance des droits des personnes et des bases légales de traitement.</li>
+                  <li>Bonnes pratiques de consentement, minimisation et gestion des durées de conservation.</li>
+                  <li>Introduction aux mesures techniques et organisationnelles de sécurité.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card fade">
+              <div class="card-inner">
+                <div class="cert-header">
+                  <img
+                    class="cert-logo"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><circle cx='60' cy='60' r='54' fill='%23f5f8ff'/><path d='M60 20 L90 36 L82 84 L60 100 L38 84 L30 36 Z' fill='%23e11d48'/><path d='M60 20 L30 36 L38 84 L60 100 Z' fill='%232256b5'/><path d='M60 34 L72 60 L60 86 L48 60 Z' fill='%23f5f8ff'/></svg>"
+                    alt="Logo SecNumAcadémie"
+                  />
+                  <div>
+                    <h2 class="card-title">SecNumAcadémie (ANSSI)</h2>
+                    <p class="cert-meta">Parcours e-learning cybersécurité de l’ANSSI.</p>
+                  </div>
+                </div>
+                <ul class="list">
+                  <li>Bonnes pratiques de cybersécurité (mots de passe, sauvegardes, mises à jour).</li>
+                  <li>Reconnaître et réduire les risques liés aux mails, web, réseaux sociaux.</li>
+                  <li>Culture sécurité pour utilisateurs et techniciens.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Zimmermann Maël</span>
+        <a href="contact.html">Me contacter</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
