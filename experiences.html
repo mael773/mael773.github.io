@@ -1,108 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Expériences - Zimmermann Maël</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <div class="animated-bg" aria-hidden="true"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Expériences professionnelles et parcours scolaire de Maël Zimmermann (BTS SIO SLAM)."
+    />
+    <title>Expériences — Portfolio Zimmermann Maël</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="brand" href="index.html"><span class="logo">ZM</span><span class="title">Zimmermann Maël</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="competences.html">Compétences</a></li>
-        <li><a href="experiences.html" class="active">Expériences</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">MZ</span>
+          <span>Maël Zimmermann</span>
+        </a>
 
-  <main>
-    <section class="fade-in">
-      <div class="container">
-        <h2>🧪 Expériences professionnelles</h2>
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="competences.html">Compétences</a>
+          <a href="experiences.html" aria-current="page">Expériences</a>
+          <a href="projets.html">Projets</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-        <!-- Timeline Pro -->
-        <div class="timeline" aria-label="Frise chronologique des expériences professionnelles">
-          <!-- Item most recent first -->
-          <div class="timeline-item">
-            <div class="timeline-dot">🟦</div>
-            <div class="timeline-content skill-card">
-              <h3>Stage — StraFormation (Strasbourg)</h3>
-              <p class="meta">Juin - Juillet 2025 · 5 semaines</p>
-              <p>Découverte et initiation à <strong>React Native</strong> : création de petites interfaces mobiles, tests et mise en pratique sur composants.</p>
+    <main id="contenu">
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title fade">Expériences</h1>
+
+          <div class="card fade">
+            <div class="card-inner">
+              <h2 class="card-title">Expériences professionnelles</h2>
+
+              <ol class="timeline" role="list" aria-label="Frise chronologique des expériences professionnelles">
+                <li class="timeline-item fade">
+                  <div class="timeline-dot" aria-hidden="true">🟦</div>
+                  <div class="timeline-content">
+                    <h3>Stage — Oxycad (Wiwersheim)</h3>
+                    <p class="timeline-meta">Janvier–Février 2026 · 5 semaines</p>
+                    <div class="timeline-actions">
+                      <button
+                        class="timeline-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="exp-pro-0-more"
+                      >
+                        Afficher plus
+                      </button>
+                    </div>
+                    <div class="timeline-more" id="exp-pro-0-more" hidden>
+                      <div class="timeline-note">
+                        <strong>Oxycad</strong> : entreprise d’ingénierie pluridisciplinaire (sous-traitance d’études, formations SolidWorks,
+                        numérisation 3D).
+                      </div>
+                      <p>
+                        Développement d’une application de <strong>GED</strong> en HTML, CSS et JS : gestion des documents, rôles et utilisateurs. Mise en place
+                        d’une 2FA (authentification à deux facteurs), hashage et salage des mots de passe pour sécuriser l’application.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="timeline-item fade">
+                  <div class="timeline-dot" aria-hidden="true">🟦</div>
+                  <div class="timeline-content">
+                    <h3>Stage — StraFormation (Strasbourg)</h3>
+                    <p class="timeline-meta">Juin–Juillet 2025 · 5 semaines</p>
+                    <div class="timeline-actions">
+                      <button
+                        class="timeline-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="exp-pro-1-more"
+                      >
+                        Afficher plus
+                      </button>
+                    </div>
+                    <div class="timeline-more" id="exp-pro-1-more" hidden>
+                      <div class="timeline-note">
+                        <strong>StraFormation</strong> : organisme de formation à Strasbourg spécialisé dans les parcours tech
+                        et métiers du numérique.
+                      </div>
+                      <p>
+                        Découverte et initiation à <strong>React Native</strong> : durant mon stage de 5 semaines, j’ai
+                        appris les bases de React Native et j’ai pu mettre en pratique mes compétences en développement
+                        web. Un des exercices/projets attribués était de développer une application mobile pour rechercher
+                        des films avec plusieurs informations (titre, année, genre, résumé, etc.).
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="timeline-item fade">
+                  <div class="timeline-dot" aria-hidden="true">🟦</div>
+                  <div class="timeline-content">
+                    <h3>Stage — HEFI SAS (Strasbourg)</h3>
+                    <p class="timeline-meta">Juin 2022 · 3 semaines</p>
+                    <div class="timeline-actions">
+                      <button
+                        class="timeline-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="exp-pro-2-more"
+                      >
+                        Afficher plus
+                      </button>
+                    </div>
+                    <div class="timeline-more" id="exp-pro-2-more" hidden><div class="timeline-note">
+                        <strong>HEFI</strong> : entreprise spécialisée dans la construction d’ouvrages architecturaux en acier et
+                        verre de haute technicité.
+                      </div>
+                      <p>
+                        Découverte de <strong>AutoCAD</strong> : apprentissage des bases sur ces 3 semaines. Mon tuteur m’a montré
+                        comment utiliser AutoCAD et créer des plans simples (1D, 2D, 3D).
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="timeline-item fade">
+                  <div class="timeline-dot" aria-hidden="true">🟦</div>
+                  <div class="timeline-content">
+                    <h3>Stage — STYL’ELEC (Willgottheim)</h3>
+                    <p class="timeline-meta">Février 2021 · 1 semaine</p>
+                    <div class="timeline-actions">
+                      <button
+                        class="timeline-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="exp-pro-3-more"
+                      >
+                        Afficher plus
+                      </button>
+                    </div>
+                    <div class="timeline-more" id="exp-pro-3-more" hidden>
+                      <div class="timeline-note">
+                        <strong>STYL’ELEC</strong> : entreprise d’électricité basée à Willgottheim, spécialisée dans les installations
+                        résidentielles et la rénovation.
+                      </div>
+                      <p>
+                        Découverte du métier d’<strong>électricien</strong> : observation de chantiers,
+                        sécurité, câblage basique et compréhension des installations domestiques.
+                      </p>
+                      
+                    </div>
+                  </div>
+                </li>
+              </ol>
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-dot">🟦</div>
-            <div class="timeline-content skill-card">
-              <h3>Stage — HEFI (Strasbourg)</h3>
-              <p class="meta">Stage de 3 semaines (Seconde)</p>
-              <p>Découverte du logiciel <strong>AutoCAD</strong> et des workflows métier dans l’ingénierie/architecture.</p>
-            </div>
-          </div>
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Parcours scolaire</h2>
 
-          <div class="timeline-item">
-            <div class="timeline-dot">🟦</div>
-            <div class="timeline-content skill-card">
-              <h3>Stage — STYL'ELEC (Willgottheim)</h3>
-              <p class="meta">1 semaine (3ème)</p>
-              <p>Découverte du métier d’<strong>électricien</strong> : chantiers, installations et sensibilisation à la sécurité.</p>
+              <ol class="timeline" role="list" aria-label="Frise chronologique du parcours scolaire">
+                <li class="timeline-item fade">
+                  <div class="timeline-dot" aria-hidden="true">🎓</div>
+                  <div class="timeline-content">
+                    <h3>2024 – en cours</h3>
+                    <p class="timeline-meta">BTS SIO — Option SLAM</p>
+                  </div>
+                </li>
+
+                <li class="timeline-item fade">
+                  <div class="timeline-dot" aria-hidden="true">🏫</div>
+                  <div class="timeline-content">
+                    <h3>2021 – 2024</h3>
+                    <p class="timeline-meta">Lycée Sainte Clotilde — Bac général (Maths / SES et physique/chimie en 1ère)</p>
+                  </div>
+                </li>
+
+                <li class="timeline-item fade">
+                  <div class="timeline-dot" aria-hidden="true">🏫</div>
+                  <div class="timeline-content">
+                    <h3>2017 – 2021</h3>
+                    <p class="timeline-meta">Collège du Kochersberg — Truchtersheim</p>
+                  </div>
+                </li>
+              </ol>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Zimmermann Maël</span>
+        <a href="contact.html">Me contacter</a>
       </div>
-    </section>
+    </footer>
 
-    <!-- Parcours scolaire -->
-    <section class="fade-in">
-      <div class="container">
-        <h2>🎓 Parcours scolaire</h2>
-
-        <div class="timeline timeline-school" aria-label="Frise chronologique du parcours scolaire">
-          <!-- Newest at top -->
-          <div class="timeline-item">
-            <div class="timeline-dot">🎓</div>
-            <div class="timeline-content skill-card">
-              <h3>2024 – en cours</h3>
-              <p class="meta">BTS SIO — Option SLAM</p>
-              <p>BTS Services Informatiques aux Organisations, spécialisation <strong>Solutions Logicielles et Applications Métiers (SLAM)</strong>.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot">🏫</div>
-            <div class="timeline-content skill-card">
-              <h3>2021 – 2024</h3>
-              <p class="meta">Lycée Sainte Clotilde — Strasbourg</p>
-              <p>Baccalauréat général — spécialités : <em>Mathématiques</em> &amp; <em>Sciences Économiques et Sociales</em>.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot">🏫</div>
-            <div class="timeline-content skill-card">
-              <h3>2017 – 2021</h3>
-              <p class="meta">Collège du Korchosberg — Truchtersheim</p>
-              <p>Cycle collège — bases scientifiques et culturelles générales.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container"><small>© 2025 Zimmermann Maël - BTS SIO SLAM</small></div>
-  </footer>
-</body>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
