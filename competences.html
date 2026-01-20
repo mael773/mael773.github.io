@@ -1,70 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compétences - Zimmermann Maël</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <div class="animated-bg" aria-hidden="true"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compétences — Portfolio Zimmermann Maël</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="brand" href="index.html"><span class="logo">ZM</span><span class="title">Zimmermann Maël</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="competences.html" class="active">Compétences</a></li>
-        <li><a href="experiences.html">Expériences</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">MZ</span>
+          <span>Maël Zimmermann</span>
+        </a>
 
-  <main>
-    <section class="skills fade-in">
-      <div class="container">
-        <h2>🧠 Compétences techniques</h2>
-
-        <div class="skills-category">
-          <h3>Développement</h3>
-          <div class="skills-grid">
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/><span>HTML</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/><span>CSS</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS"/><span>JavaScript</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"/><span>PHP</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><span>Python</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/><span>Java</span></div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>Cybersécurité</h3>
-          <div class="skills-grid">
-            <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="RGPD"/><span>RGPD</span></div>
-            <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/5394/5394907.png" alt="OSINT"/><span>OSINT</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vagrant/vagrant-original.svg" alt="VirtualBox"/><span>VirtualBox</span></div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>Base de données</h3>
-          <div class="skills-grid">
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/><span>MySQL</span></div>
-            <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Access"/><span>Access</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite"/><span>SQLite</span></div>
-          </div>
-        </div>
-
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="competences.html" aria-current="page">Compétences</a>
+          <a href="experiences.html">Expériences</a>
+          <a href="projets.html">Projets</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container"><small>© 2025 Zimmermann Maël - BTS SIO SLAM</small></div>
-  </footer>
-</body>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title fade">Compétences</h1>
+
+          <section class="skills-block card fade">
+            <div class="card-inner">
+              <h2 class="card-title">Développement</h2>
+              <div class="skills-grid">
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /><span>HTML</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /><span>CSS</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><span>JavaScript</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" /><span>PHP</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='%23f0c320' d='M10 20 L50 40 L50 90 L10 70 Z'/><path fill='%23716fb3' d='M50 40 L90 20 L90 70 L50 90 Z'/><path fill='%23c5772a' d='M10 20 L50 40 L90 70 L50 90 Z'/></svg>" alt="WinDev" /><span>WinDev</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><span>Python</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" /><span>Java</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="skills-block card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Cybersécurité</h2>
+              <div class="skills-grid">
+                <div class="skill-bubble"><img class="skill-icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><circle cx='60' cy='60' r='54' fill='%231c3faa'/><rect x='38' y='50' width='44' height='34' rx='6' fill='white'/><rect x='50' y='42' width='20' height='12' rx='4' fill='white'/><path d='M46 58h28v10H46z' fill='%231c3faa'/><text x='60' y='82' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='700' fill='%231c3faa' text-anchor='middle'>RGPD</text></svg>" alt="RGPD" /><span>RGPD</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn-icons-png.flaticon.com/512/5394/5394907.png" alt="OSINT" /><span>OSINT</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vagrant/vagrant-original.svg" alt="VirtualBox" /><span>VirtualBox</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="skills-block card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Bases de données</h2>
+              <div class="skills-grid">
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /><span>MySQL</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" /><span>SQLite</span></div>
+                <div class="skill-bubble"><img class="skill-icon" src="https://img.icons8.com/color/48/microsoft-access-2019--v1.png" alt="Microsoft Access" /><span>Microsoft Access</span></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Zimmermann Maël</span>
+        <a href="contact.html">Me contacter</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
