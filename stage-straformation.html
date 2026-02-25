@@ -163,7 +163,7 @@
                   <li>Consolider les bases en React Native</li>
                   <li>Mieux comprendre la gestion de composant et la navigation</li>
                   <li>Gagner en autonomqie pour la finalisation du stage</li>
-                <li><stong>Objectif de la semaine :</stong> Finaliser le projet avec une meilleur maitrise technqiue et valider les compétences acquise durant le stage</li>
+                <li><strong>Objectif de la semaine :</strong> Finaliser le projet avec une meilleur maitrise technqiue et valider les compétences acquise durant le stage</li>
             </div>
           </div>
 
@@ -244,29 +244,6 @@
                 <li><strong>/utils</strong> : fonctions utilitaires (formatDate, truncateText, debounce)</li>
                 <li><strong>/assets</strong> : images, icônes, fonts</li>
               </ul>
-
-              <h3 class="option-subtitle">Extraits de code significatifs</h3>
-              <div class="timeline-note" style="margin-top: var(--space-3)">
-                <strong>Exemple : Service API pour récupérer les films populaires</strong>
-                <pre style="background: rgba(0,0,0,0.3); padding: var(--space-2); border-radius: 8px; overflow-x: auto; margin-top: var(--space-2)"><code>import axios from 'axios';
-
-const API_KEY = 'votre_clé_api_tmdb';
-const BASE_URL = 'https://api.themoviedb.org/3';
-
-export const getPopularMovies = async () => {
-  try {
-    const response = await axios.get(
-      `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=fr-FR`
-    );
-    return response.data.results;
-  } catch (error) {
-    console.error('Erreur lors de la récupération des films:', error);
-    throw error;
-  }
-};</code></pre>
-              </div>
-            </div>
-          </div>
 
           <div class="card fade section-gap-top">
             <div class="card-inner">
