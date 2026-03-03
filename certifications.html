@@ -33,70 +33,121 @@
         <div class="container">
           <h1 class="section-title fade">Certifications</h1>
 
-          <div class="grid-2">
+          <p class="fade" style="color: var(--muted); margin-bottom: var(--space-4)">
+            Certifications et formations complémentaires obtenues dans le cadre de mon parcours BTS SIO.
+          </p>
+
+          <!-- On passe en colonne unique pour éviter le déséquilibre des 3 cartes -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-3)">
+
+            <!-- PIX -->
             <div class="card fade">
               <div class="card-inner">
-                <div class="cert-header">
+                <div style="display: flex; align-items: flex-start; gap: var(--space-4)">
+
                   <img
                     class="cert-logo"
+                    style="flex-shrink: 0; width: 72px; height: 72px; border-radius: 14px;"
                     src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='18' fill='%23f5f8ff'/><linearGradient id='pigrad' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%234c8bff'/><stop offset='100%' stop-color='%232d6bff'/></linearGradient><text x='30' y='78' font-family='Inter,Arial,sans-serif' font-size='70' font-weight='700' fill='url(%23pigrad)'>pi</text><text x='72' y='78' font-family='Inter,Arial,sans-serif' font-size='70' font-weight='700' fill='%23f6a700'>x</text></svg>"
                     alt="Logo PIX"
                   />
-                  <div>
-                    <h2 class="card-title">PIX</h2>
-                    <p class="cert-meta">Certification française de compétences numériques.</p>
+
+                  <div style="flex: 1">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-2)">
+                      <h2 class="card-title" style="margin: 0">PIX</h2>
+                      <span class="timeline-meta">Certification officielle — Éducation nationale</span>
+                    </div>
+                    <p style="margin-bottom: var(--space-3)">
+                      Certification française de référence pour les compétences numériques, reconnue par
+                      l'Éducation nationale et l'État. Elle évalue les compétences sur 5 domaines clés via
+                      un parcours adaptatif avec mises en situation concrètes.
+                    </p>
+                    <ul class="list">
+                      <li>Gestion de l'information et des données</li>
+                      <li>Communication et collaboration en ligne</li>
+                      <li>Création de contenu numérique</li>
+                      <li>Sécurité et protection des données personnelles</li>
+                      <li>Environnements numériques et résolution de problèmes</li>
+                    </ul>
                   </div>
                 </div>
-                <ul class="list">
-                  <li>Évalue et certifie les compétences numériques (information, création, sécurité, collaboration).</li>
-                  <li>Parcours adaptatif avec mise en situation concrète.</li>
-                  <li>Reconnaissance officielle (Éducation nationale / État).</li>
-                </ul>
               </div>
             </div>
 
+            <!-- RGPD -->
             <div class="card fade">
               <div class="card-inner">
-                <div class="cert-header">
+                <div style="display: flex; align-items: flex-start; gap: var(--space-4)">
+
                   <img
                     class="cert-logo"
+                    style="flex-shrink: 0; width: 72px; height: 72px; border-radius: 14px;"
                     src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><circle cx='60' cy='60' r='54' fill='%231c3faa'/><rect x='38' y='50' width='44' height='34' rx='6' fill='white'/><rect x='50' y='42' width='20' height='12' rx='4' fill='white'/><path d='M46 58h28v10H46z' fill='%231c3faa'/><text x='60' y='82' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='700' fill='%231c3faa' text-anchor='middle'>RGPD</text></svg>"
                     alt="Logo RGPD"
                   />
-                  <div>
-                    <h2 class="card-title">Sensibilisation RGPD</h2>
-                    <p class="cert-meta">Principes clés de protection des données.</p>
+
+                  <div style="flex: 1">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-2)">
+                      <h2 class="card-title" style="margin: 0">Sensibilisation RGPD</h2>
+                      <span class="timeline-meta">Protection des données personnelles</span>
+                    </div>
+                    <p style="margin-bottom: var(--space-3)">
+                      Formation aux principes fondamentaux du Règlement Général sur la Protection des Données.
+                      Indispensable dans le cadre du développement d'applications professionnelles, notamment
+                      pour la réalisation de l'application GED durant mon stage chez Oxycad.
+                    </p>
+                    <ul class="list">
+                      <li>Droits des personnes et bases légales de traitement</li>
+                      <li>Consentement, minimisation et durées de conservation</li>
+                      <li>Mesures techniques et organisationnelles de sécurité</li>
+                      <li>Obligations du responsable de traitement</li>
+                    </ul>
                   </div>
                 </div>
-                <ul class="list">
-                  <li>Connaissance des droits des personnes et des bases légales de traitement.</li>
-                  <li>Bonnes pratiques de consentement, minimisation et gestion des durées de conservation.</li>
-                  <li>Introduction aux mesures techniques et organisationnelles de sécurité.</li>
-                </ul>
               </div>
             </div>
 
+            <!-- SecNumAcadémie -->
             <div class="card fade">
               <div class="card-inner">
-                <div class="cert-header">
+                <div style="display: flex; align-items: flex-start; gap: var(--space-4)">
+
                   <img
                     class="cert-logo"
+                    style="flex-shrink: 0; width: 72px; height: 72px; border-radius: 14px;"
                     src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><circle cx='60' cy='60' r='54' fill='%23f5f8ff'/><path d='M60 20 L90 36 L82 84 L60 100 L38 84 L30 36 Z' fill='%23e11d48'/><path d='M60 20 L30 36 L38 84 L60 100 Z' fill='%232256b5'/><path d='M60 34 L72 60 L60 86 L48 60 Z' fill='%23f5f8ff'/></svg>"
                     alt="Logo SecNumAcadémie"
                   />
-                  <div>
-                    <h2 class="card-title">SecNumAcadémie (ANSSI)</h2>
-                    <p class="cert-meta">Parcours e-learning cybersécurité de l’ANSSI.</p>
+
+                  <div style="flex: 1">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-2)">
+                      <h2 class="card-title" style="margin: 0">SecNumAcadémie</h2>
+                      <span class="timeline-meta">ANSSI — Agence Nationale de la Sécurité des SI</span>
+                    </div>
+                    <p style="margin-bottom: var(--space-3)">
+                      Parcours e-learning de cybersécurité proposé par l'ANSSI, l'autorité nationale française
+                      en matière de sécurité des systèmes d'information. Ce parcours couvre les fondamentaux
+                      de la sécurité numérique pour les professionnels de l'informatique.
+                    </p>
+                    <ul class="list">
+                      <li>Bonnes pratiques : mots de passe, sauvegardes, mises à jour</li>
+                      <li>Identification et réduction des risques (mails, web, réseaux sociaux)</li>
+                      <li>Sécurité des réseaux et des postes de travail</li>
+                      <li>Culture cybersécurité pour utilisateurs et techniciens</li>
+                    </ul>
                   </div>
                 </div>
-                <ul class="list">
-                  <li>Bonnes pratiques de cybersécurité (mots de passe, sauvegardes, mises à jour).</li>
-                  <li>Reconnaître et réduire les risques liés aux mails, web, réseaux sociaux.</li>
-                  <li>Culture sécurité pour utilisateurs et techniciens.</li>
-                </ul>
               </div>
             </div>
+
           </div>
+
+          <div class="cta-row section-gap-top">
+            <a href="veille-techno.html" class="button primary">Voir ma veille technologique</a>
+            <a href="projets.html" class="button">Voir mes projets</a>
+            <a href="contact.html" class="button">Me contacter</a>
+          </div>
+
         </div>
       </section>
     </main>
