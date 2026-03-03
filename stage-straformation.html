@@ -265,53 +265,6 @@
             </div>
           </div>
 
-          <!-- Défis techniques — carte séparée (était incorrectement imbriquée avant) -->
-          <div class="card fade section-gap-top">
-            <div class="card-inner">
-              <h2 class="card-title">Défis techniques et solutions</h2>
-
-              <div class="timeline-note" style="margin-bottom: var(--space-3)">
-                <strong>Défi 1 : Gestion de la performance avec de longues listes</strong><br>
-                L'affichage de centaines de films ralentissait considérablement l'application.
-              </div>
-              <p>
-                <strong>Solution :</strong> Utilisation de <code>FlatList</code> au lieu de <code>ScrollView</code> pour bénéficier du lazy loading
-                et de la virtualisation. Implémentation de la pagination avec chargement progressif ("infinite scroll").
-                Optimisation des images avec des dimensions appropriées et mise en cache.
-              </p>
-
-              <div class="timeline-note" style="margin: var(--space-3) 0">
-                <strong>Défi 2 : Appels API excessifs lors de la saisie</strong><br>
-                Chaque frappe déclenchait un appel API, saturant rapidement les limites de l'API gratuite.
-              </div>
-              <p>
-                <strong>Solution :</strong> Mise en place d'un mécanisme de debounce : l'appel API n'est effectué
-                que 500 ms après la dernière frappe de l'utilisateur, réduisant drastiquement le nombre de requêtes
-                tout en gardant une expérience fluide.
-              </p>
-
-              <div class="timeline-note" style="margin: var(--space-3) 0">
-                <strong>Défi 3 : Persistance des favoris</strong><br>
-                Besoin de sauvegarder les films favoris localement pour qu'ils persistent entre les sessions.
-              </div>
-              <p>
-                <strong>Solution :</strong> Utilisation d'AsyncStorage, l'équivalent de localStorage pour React Native.
-                Création d'un hook personnalisé <code>useFavorites</code> pour gérer l'ajout, la suppression et la récupération
-                des favoris de manière centralisée.
-              </p>
-
-              <div class="timeline-note" style="margin: var(--space-3) 0">
-                <strong>Défi 4 : Navigation entre écrans avec passage de données</strong><br>
-                Difficulté à transmettre les données d'un film depuis la liste vers l'écran de détails.
-              </div>
-              <p>
-                <strong>Solution :</strong> Maîtrise de React Navigation et de son système de paramètres de route.
-                Passage des données via <code>navigation.navigate('Details', { movie })</code> et récupération avec
-                <code>route.params.movie</code> dans l'écran de destination.
-              </p>
-            </div>
-          </div>
-
           <!-- Apprentissages -->
           <div class="card fade section-gap-top">
             <div class="card-inner">
@@ -362,15 +315,15 @@
               <h3 class="option-subtitle">Points forts de l'expérience</h3>
               <ul class="list">
                 <li>
-                  <strong>Progression rapide</strong> : du niveau débutant à la création d'une application complète
+                  <strong>Progression simple</strong> : du niveau débutant à la création d'une application complète
                   et fonctionnelle en quelques semaines.
                 </li>
                 <li>
-                  <strong>Apprentissage hands-on</strong> : beaucoup de pratique, des projets concrets plutôt que
+                  <strong>Apprentissage </strong> : beaucoup de pratique, des projets concrets plutôt que
                   de la théorie pure.
                 </li>
                 <li>
-                  <strong>Compétences transférables</strong> : les concepts React appris sont réutilisables dans
+                  <strong>Compétences accise</strong> : les concepts React appris sont réutilisables dans
                   le développement web avec React.
                 </li>
                 <li>
@@ -378,26 +331,7 @@
                   de nombreuses opportunités professionnelles.
                 </li>
               </ul>
-
-              <h3 class="option-subtitle">Perspectives</h3>
-              <p>Suite à cette expérience, je souhaite approfondir mes connaissances en :</p>
-              <ul class="list">
-                <li>React avancé et Redux pour la gestion d'état complexe</li>
-                <li>TypeScript pour un code plus robuste</li>
-                <li>Animations avancées et micro-interactions</li>
-                <li>Intégration de fonctionnalités natives (caméra, GPS, notifications push)</li>
-                <li>Tests automatisés avec Jest et React Testing Library</li>
-                <li>Optimisation des performances et bonnes pratiques</li>
-              </ul>
-
-              <div class="timeline-note" style="margin-top: var(--space-3)">
-                <strong>Certificat de stage :</strong> À l'issue du stage, StraFormation m'a délivré une attestation
-                de fin de formation validant mes nouvelles compétences en React Native. Le projet MovieSearch App a
-                été évalué et noté 17/20, avec des félicitations pour la qualité du code et de l'interface utilisateur.
-              </div>
-            </div>
-          </div>
-
+              
           <div class="cta-row section-gap-top">
             <a href="experiences.html" class="button primary">← Retour aux expériences</a>
             <a href="stage-oxycad.html" class="button">Stage Oxycad</a>
