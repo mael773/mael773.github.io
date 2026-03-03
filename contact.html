@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -33,24 +34,50 @@
           <h1 class="section-title fade">Contact</h1>
 
           <div class="grid-2">
+
+            <!-- Formulaire -->
             <div class="card fade">
               <div class="card-inner">
                 <h2 class="card-title">Formulaire</h2>
-                <form>
+                <!--
+                  Pour que le formulaire envoie directement à ton Gmail sans logiciel mail,
+                  remplace l'action par ton URL Formspree (gratuit sur formspree.io) :
+                  <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+                -->
+                <form action="mailto:zimmermannmael@gmail.com" method="post" enctype="text/plain" id="contact-form">
                   <div style="display: grid; gap: 12px">
+
                     <label>
                       <span style="display:block; color: var(--muted); margin-bottom: 6px">Nom</span>
-                      <input required name="name" type="text" style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);" />
+                      <input
+                        required
+                        name="Nom"
+                        type="text"
+                        placeholder="Votre nom"
+                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);"
+                      />
                     </label>
 
                     <label>
                       <span style="display:block; color: var(--muted); margin-bottom: 6px">Email</span>
-                      <input required name="email" type="email" style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);" />
+                      <input
+                        required
+                        name="Email"
+                        type="email"
+                        placeholder="votre@email.com"
+                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);"
+                      />
                     </label>
 
                     <label>
                       <span style="display:block; color: var(--muted); margin-bottom: 6px">Message</span>
-                      <textarea required name="message" rows="5" style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text); resize: vertical;"></textarea>
+                      <textarea
+                        required
+                        name="Message"
+                        rows="5"
+                        placeholder="Votre message..."
+                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text); resize: vertical;"
+                      ></textarea>
                     </label>
 
                     <button class="button primary" type="submit">Envoyer</button>
@@ -59,13 +86,26 @@
               </div>
             </div>
 
+            <!-- Liens directs -->
             <div class="card fade">
               <div class="card-inner">
-                <h2 class="card-title">Liens</h2>
-                <div class="cta-row" style="margin-top: var(--space-2)">
-                  <a class="button" href="mailto:mael.zimmermann@example.com">Envoyer un email</a>
-                  <a class="button" href="#">LinkedIn</a>
+                <h2 class="card-title">Liens directs</h2>
+
+                <div class="cta-row" style="margin-top: var(--space-2); flex-direction: column; align-items: flex-start; gap: var(--space-2)">
+                  <a class="button" href="mailto:zimmermannmael@gmail.com">
+                    ✉️ zimmermannmael@gmail.com
+                  </a>
+                  <a class="button" href="https://www.linkedin.com/in/ma%C3%ABl-zimmermann-88b72332b/" target="_blank" rel="noopener noreferrer">
+                    🔗 LinkedIn
+                  </a>
+                </div>
+
+                <div class="timeline-note" style="margin-top: var(--space-4)">
+                  <strong>Disponibilité :</strong> Je réponds généralement sous 24 à 48 h.
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
