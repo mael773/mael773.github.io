@@ -31,7 +31,8 @@
     <main>
       <section class="section">
         <div class="container">
-          <h1 class="section-title fade">Projets réaliser </h1>
+          <!-- CORRECTION : "réaliser" → "réalisés" -->
+          <h1 class="section-title fade">Projets réalisés</h1>
 
           <div class="grid-2">
             <article class="card fade" style="grid-column: span 2">
@@ -42,11 +43,12 @@
                   coordonnées. Objectif : un rendu moderne, lisible et rapide, avec navigation fluide et animations légères.
                 </p>
                 <ul class="list">
-                  <li>Langage : HTML, CSS, JavaScript.</li>
-                  <li>Accessibilité : balises sémantiques, aria-current, background décoratif masqué.</li>
+                  <li><strong>Langages :</strong> HTML, CSS, JavaScript</li>
+                  <li><strong>Accessibilité :</strong> balises sémantiques, aria-current, background décoratif masqué aux lecteurs d'écran</li>
+                  <li><strong>Design :</strong> thème sombre, animations au scroll, composants réutilisables</li>
                 </ul>
                 <div class="cta-row" style="margin-top: var(--space-3)">
-                  <a class="button primary" href="cv-mael-zimmermann.pdf" download>Mon CV</a>
+                  <a class="button primary" href="cv-mael-zimmermann.pdf" download>Télécharger mon CV</a>
                 </div>
               </div>
             </article>
@@ -55,18 +57,45 @@
               <div class="card-inner">
                 <h2 class="card-title">GED — Gestion Électronique de Documents</h2>
                 <p>
-                  Application de gestion documentaire permettant de stocker, organiser et partager des fichiers avec des
-                  droits d’accès simples. Objectif : centraliser les documents pour une petite équipe sans dépendre d’un
-                  service cloud tiers. Projet réalisé en stage chez Oxycad (Wiwersheim) — Janvier–Février 2026.
+                  Application web de gestion documentaire permettant de stocker, organiser et partager des fichiers avec des
+                  droits d'accès par rôle. Réalisée en stage chez Oxycad (Wiwersheim) — Janvier–Février 2026.
                 </p>
                 <ul class="list">
-                  <li>Langage : HTML/CSS et JavaScript.</li>
-                  <li>Fonctionnalités : upload, arborescence basique, recherche, rôles/utilisateurs.</li>
-                  <li>Sécurité : 2FA, hashage + salage des mots de passe, contrôles d’accès renforcés.</li>
-            
+                  <li><strong>Langages :</strong> HTML, CSS, JavaScript, PHP, MySQL</li>
+                  <li><strong>Fonctionnalités :</strong> upload de fichiers, arborescence, recherche, rôles utilisateurs</li>
+                  <li><strong>Sécurité :</strong> 2FA (OTP), hashage bcrypt, HTTPS via IIS, contrôles d'accès renforcés</li>
+                  <li><strong>Bonus :</strong> application de gestion des notes de frais (TTC/HT, statut de remboursement)</li>
                 </ul>
+                <div class="cta-row" style="margin-top: var(--space-3)">
+                  <a class="button" href="stage-oxycad.html">Voir le détail du stage →</a>
+                </div>
               </div>
             </article>
+
+            <article class="card fade" style="grid-column: span 2">
+              <div class="card-inner">
+                <h2 class="card-title">MovieSearch App 🎬</h2>
+                <p>
+                  Application mobile de recherche de films développée avec React Native lors de mon stage chez StraFormation.
+                  Elle utilise l'API TMDB pour afficher les films populaires, permettre la recherche en temps réel
+                  et gérer une liste de favoris persistante.
+                </p>
+                <ul class="list">
+                  <li><strong>Technologies :</strong> React Native, JavaScript, Node.js, API REST (TMDB)</li>
+                  <li><strong>Fonctionnalités :</strong> recherche avec debounce, fiche détaillée, favoris avec AsyncStorage</li>
+                  <li><strong>Architecture :</strong> organisation en screens, components, services, navigation</li>
+                  <li><strong>Plateformes :</strong> iOS & Android depuis une seule base de code</li>
+                </ul>
+                <div class="cta-row" style="margin-top: var(--space-3)">
+                  <a class="button" href="stage-straformation.html">Voir le détail du stage →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="cta-row section-gap-top">
+            <a href="experiences.html" class="button primary">Voir mes expériences</a>
+            <a href="contact.html" class="button">Me contacter</a>
           </div>
         </div>
       </section>
