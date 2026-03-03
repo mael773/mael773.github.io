@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact — Portfolio Zimmermann Maël</title>
+    <title>Veille Technologique — Portfolio Zimmermann Maël</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -22,8 +22,8 @@
           <a href="experiences.html">Expériences</a>
           <a href="projets.html">Projets</a>
           <a href="certifications.html">Certifications</a>
-          <a href="veille-techno.html">Veille Techno</a>
-          <a href="contact.html" aria-current="page">Contact</a>
+          <a href="veille-techno.html" aria-current="page">Veille Techno</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
@@ -31,95 +31,240 @@
     <main>
       <section class="section">
         <div class="container">
-          <h1 class="section-title fade">Contact</h1>
+          <h1 class="section-title fade">Veille Technologique</h1>
 
-          <div class="grid-2">
+          <!-- Sujet & Problématique -->
+          <div class="card fade">
+            <div class="card-inner">
+              <div class="badge" style="margin-bottom: var(--space-3)">
+                <strong>BTS SIO SLAM</strong>
+                <span aria-hidden="true">·</span>
+                <span>Épreuve E5</span>
+                <span aria-hidden="true">·</span>
+                <span>2025 – 2026</span>
+              </div>
+              <h2 class="card-title">Sujet : L'IA et les cryptomonnaies</h2>
+              <div class="timeline-note" style="margin-top: var(--space-3)">
+                <strong>Problématique :</strong> Comment l'intégration de l'intelligence artificielle générative dans
+                l'écosystème des cryptomonnaies influence-t-elle les risques de sécurité, de fraude, de manipulation
+                de marché et de régulation, tout en préservant l'innovation ?
+              </div>
+            </div>
+          </div>
 
-            <!-- Formulaire -->
-            <div class="card fade">
-              <div class="card-inner">
-                <h2 class="card-title">Formulaire</h2>
-                <!--
-                  Le formulaire utilise mailto: pour ouvrir directement
-                  le client mail de l'utilisateur avec le message pré-rempli.
-                  Aucun serveur nécessaire.
-                -->
-                <form action="mailto:zimmermannmael@gmail.com" method="post" enctype="text/plain" novalidate id="contact-form">
-                  <div style="display: grid; gap: 12px">
+          <!-- Introduction -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">1. Introduction à la veille technologique</h2>
+              <p>
+                La veille technologique est un élément essentiel dans le domaine informatique. Elle permet de rester
+                informé des évolutions technologiques, des nouvelles menaces, des innovations et des changements
+                réglementaires qui peuvent impacter les pratiques professionnelles.
+              </p>
+              <p style="margin-top: var(--space-3)">
+                Dans le cadre de mon BTS SIO, j'ai choisi d'étudier l'impact de l'intelligence artificielle
+                générative sur l'écosystème des cryptomonnaies — un sujet à la croisée de deux révolutions
+                technologiques majeures de cette décennie.
+              </p>
 
-                    <label>
-                      <span style="display:block; color: var(--muted); margin-bottom: 6px">Nom</span>
-                      <input
-                        required
-                        name="Nom"
-                        type="text"
-                        placeholder="Votre nom"
-                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);"
-                      />
-                    </label>
+              <h3 class="option-subtitle">Pourquoi ce sujet ?</h3>
+              <p>
+                J'ai choisi ce sujet car l'intelligence artificielle et les cryptomonnaies sont deux domaines en
+                forte évolution dont la convergence soulève des enjeux profonds en matière de sécurité, de fraude
+                et de régulation. Ce sujet est particulièrement pertinent car il touche à la cybersécurité, à la
+                finance numérique et à l'éthique technologique — trois axes au cœur de la formation BTS SIO.
+              </p>
+            </div>
+          </div>
 
-                    <label>
-                      <span style="display:block; color: var(--muted); margin-bottom: 6px">Email</span>
-                      <input
-                        required
-                        name="Email"
-                        type="email"
-                        placeholder="votre@email.com"
-                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);"
-                      />
-                    </label>
+          <!-- Outils & Organisation -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">2. Organisation de la veille avec Start.me</h2>
+              <p>
+                Pour structurer mes recherches efficacement, j'ai utilisé <strong>Start.me</strong>, un outil qui
+                permet de centraliser toutes ses ressources sur une seule page personnalisée.
+              </p>
 
-                    <label>
-                      <span style="display:block; color: var(--muted); margin-bottom: 6px">Message</span>
-                      <textarea
-                        required
-                        name="Message"
-                        rows="5"
-                        placeholder="Votre message..."
-                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text); resize: vertical;"
-                      ></textarea>
-                    </label>
-
-                    <button class="button primary" type="submit">Envoyer</button>
+              <div class="grid-2 options-grid" style="margin-top: var(--space-3)">
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">📰 Partie 1 — Actualités générales</h3>
+                    <p>
+                      Un flux d'actualités générales pour rester informé des grandes tendances mondiales
+                      du numérique, de l'économie et de la technologie (Le Monde Informatique, ZDNet, The Verge).
+                    </p>
                   </div>
-                </form>
-              </div>
-            </div>
-
-            <!-- Liens directs -->
-            <div class="card fade">
-              <div class="card-inner">
-                <h2 class="card-title">Liens directs</h2>
-
-                <div class="cta-row" style="margin-top: var(--space-2); flex-direction: column; align-items: flex-start; gap: var(--space-2)">
-
-                  <a class="button" href="mailto:zimmermannmael@gmail.com">
-                    ✉️ zimmermannmael@gmail.com
-                  </a>
-
-                  <!--
-                    ============================================================
-                    LINKEDIN : remplace l'URL ci-dessous par la tienne.
-                    Pour la trouver :
-                      1. Ouvre LinkedIn et connecte-toi
-                      2. Clique sur "Voir le profil"
-                      3. Copie l'URL dans la barre d'adresse
-                         (ex : https://www.linkedin.com/in/mael-zimmermann/)
-                      4. Colle-la à la place du # ci-dessous
-                    ============================================================
-                  -->
-                  <a class="button" href="https://www.linkedin.com/in/TON-PROFIL-ICI" target="_blank" rel="noopener noreferrer">
-                    🔗 LinkedIn
-                  </a>
-
                 </div>
 
-                <div class="timeline-note" style="margin-top: var(--space-4)">
-                  <strong>Disponibilité :</strong> Je réponds généralement sous 24 à 48 h.
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">🤖 Partie 2 — IA & Cryptomonnaies</h3>
+                    <p>
+                      Une section dédiée à l'actualité spécifique de l'intelligence artificielle et des
+                      cryptomonnaies, avec des articles sur l'impact potentiel de l'IA sur Bitcoin et
+                      les marchés décentralisés.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">🔗 Partie 3 — Flux RSS par sujets</h3>
+                    <p>
+                      Une bibliothèque de liens vers des sites de référence et des flux RSS, classés par thèmes :
+                      sécurité blockchain, régulation, fraudes liées à l'IA, marchés crypto.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">📌 Méthode de suivi</h3>
+                    <p>
+                      Consultation régulière (plusieurs fois par semaine) avec prise de notes des événements
+                      marquants, classement par date et par thème pour faciliter la restitution lors de l'épreuve E5.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
+          <!-- Faits marquants -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">3. Faits marquants de la veille</h2>
+              <p style="margin-bottom: var(--space-3); color: var(--muted)">
+                Événements concrets relevés et analysés au fil de la veille active.
+              </p>
+
+              <div class="grid-2 options-grid">
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">📉 DeepSeek et le marché crypto — Janvier 2025</h3>
+                    <p>
+                      L'annonce du modèle d'IA chinois DeepSeek R1 a provoqué une chute brutale des marchés tech
+                      et crypto. Bitcoin a perdu plus de 10 % en 48 heures, illustrant la sensibilité croissante
+                      du secteur aux avancées de l'IA.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">🛡️ Sécurité : double tranchant de l'IA</h3>
+                    <p>
+                      Des attaques de phishing automatisées générées par IA ont coûté plusieurs millions de dollars
+                      à des plateformes d'échange en 2024-2025. En parallèle, des sociétés comme Chainalysis
+                      déploient des outils IA pour détecter les fraudes en temps réel.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">🎭 Deepfakes et manipulation de marché</h3>
+                    <p>
+                      En 2024, plusieurs arnaques massives ont utilisé des deepfakes vidéo de dirigeants
+                      (Elon Musk, PDG de Binance) pour promouvoir de faux projets crypto, permettant de dérober
+                      des dizaines de millions de dollars à des investisseurs non avertis.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">⚖️ Régulation MiCA — Europe 2024-2025</h3>
+                    <p>
+                      Le règlement européen MiCA (Markets in Crypto-Assets) est entré pleinement en vigueur fin 2024.
+                      Il impose aux plateformes crypto des obligations de transparence et de lutte contre les
+                      manipulations de marché, y compris celles facilitées par l'IA.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sources -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">4. Sources et outils utilisés</h2>
+
+              <div class="skills-grid">
+                <div class="skill-bubble visible">
+                  <img class="skill-icon"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23f97316'/><text x='50' y='68' font-family='Arial' font-size='48' font-weight='900' fill='white' text-anchor='middle'>S</text></svg>"
+                    alt="Start.me" />
+                  <span>Start.me</span>
+                </div>
+
+                <div class="skill-bubble visible">
+                  <img class="skill-icon"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23f59e0b'/><text x='50' y='68' font-family='Arial' font-size='34' font-weight='900' fill='white' text-anchor='middle'>RSS</text></svg>"
+                    alt="Flux RSS" />
+                  <span>Flux RSS</span>
+                </div>
+
+                <div class="skill-bubble visible">
+                  <img class="skill-icon"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230f172a'/><circle cx='50' cy='42' r='18' fill='none' stroke='%2338bdf8' stroke-width='6'/><line x1='62' y1='56' x2='78' y2='74' stroke='%2338bdf8' stroke-width='6' stroke-linecap='round'/><circle cx='50' cy='42' r='6' fill='%2338bdf8'/></svg>"
+                    alt="OSINT" />
+                  <span>Veille OSINT</span>
+                </div>
+
+                <div class="skill-bubble visible">
+                  <img class="skill-icon"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230ea5e9'/><text x='50' y='65' font-family='Arial' font-size='28' font-weight='900' fill='white' text-anchor='middle'>Blog</text></svg>"
+                    alt="Blogs" />
+                  <span>Blogs Tech</span>
+                </div>
+              </div>
+
+              <div class="timeline-note" style="margin-top: var(--space-4)">
+                <strong>Sources principales consultées :</strong> CoinDesk, Cointelegraph, ANSSI (bulletins de sécurité),
+                Journal du Coin, The Block, MIT Technology Review, bulletins réglementaires européens (MiCA),
+                rapports Chainalysis 2024-2025.
+              </div>
+            </div>
+          </div>
+
+          <!-- Bilan -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">5. Bilan de la démarche</h2>
+              <p>
+                Cette veille technologique m'a permis de développer une vision globale des interactions entre
+                deux domaines en pleine transformation. Voici les principaux apports :
+              </p>
+              <ul class="list">
+                <li>
+                  <strong>Compréhension des risques émergents</strong> : l'IA amplifie à la fois les capacités
+                  d'attaque et de défense dans l'univers crypto, créant un équilibre instable et en constante évolution.
+                </li>
+                <li>
+                  <strong>Sensibilisation à la régulation</strong> : le règlement MiCA en Europe représente une
+                  avancée majeure, mais les cadres légaux peinent encore à suivre le rythme d'innovation.
+                </li>
+                <li>
+                  <strong>Développement d'une méthode de veille</strong> : l'utilisation de Start.me et de flux
+                  RSS structurés m'a appris à organiser une veille active et efficace, compétence directement
+                  valorisable en environnement professionnel.
+                </li>
+                <li>
+                  <strong>Lien avec la cybersécurité</strong> : les cas concrets relevés (phishing IA, deepfakes,
+                  manipulation de marché) renforcent directement mes compétences en sécurité informatique,
+                  un axe majeur du BTS SIO.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cta-row section-gap-top">
+            <a href="certifications.html" class="button primary">Voir mes certifications</a>
+            <a href="projets.html" class="button">Voir mes projets</a>
+            <a href="contact.html" class="button">Me contacter</a>
           </div>
         </div>
       </section>
