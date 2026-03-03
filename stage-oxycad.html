@@ -32,6 +32,341 @@
       <section class="section">
         <div class="container">
           <a href="experiences.html" class="button" style="margin-bottom: var(--space-4)">← Retour aux expériences</a>
+
+          <h1 class="section-title fade">Stage — Oxycad</h1>
+
+          <!-- Infos générales -->
+          <div class="card fade">
+            <div class="card-inner">
+              <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3)">
+                <div style="flex: 1">
+                  <p class="timeline-meta" style="margin-bottom: var(--space-2)">12 janvier 2026 - 13 février 2026 · 5 semaines</p>
+                  <p class="timeline-meta">📍 Wiwersheim, Bas-Rhin (67)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Présentation de l'entreprise -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">L'entreprise Oxycad</h2>
+              <p>
+                <strong>Oxycad</strong> est une entreprise d'ingénierie pluridisciplinaire basée à Wiwersheim, dans le Bas-Rhin.
+                Spécialisée dans plusieurs domaines clés de l'industrie moderne, elle intervient notamment dans :
+              </p>
+              <ul class="list">
+                <li><strong>La sous-traitance d'études techniques</strong> : conception et optimisation de systèmes mécaniques et industriels pour des clients variés</li>
+                <li><strong>Les formations SolidWorks</strong> : formation professionnelle sur l'un des logiciels de CAO 3D les plus utilisés dans l'industrie</li>
+                <li><strong>La numérisation 3D</strong> : capture et modélisation précise d'objets physiques pour la maintenance et la rétro-ingénierie</li>
+              </ul>
+              <p>
+                Oxycad accompagne ses clients dans la transformation numérique de leurs processus de conception et de production,
+                en proposant des solutions innovantes adaptées aux besoins spécifiques de chaque secteur (automobile, aéronautique,
+                biens d'équipement, etc.).
+              </p>
+              <div class="timeline-note" style="margin-top: var(--space-3)">
+                <strong>Création :</strong> 12 juin 2014<br>
+                <strong>Forme juridique :</strong> SARL – Capital 3 000 €<br>
+                <strong>Effectif :</strong> PME (1 salarié)<br>
+                <strong>Infrastructure :</strong> PC portable professionnel + Serveur NAS avec sauvegarde quotidienne<br>
+                <strong>Secteur :</strong> Ingénierie et conseil technique
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet principal -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Projet principal : Application GED</h2>
+              <p>
+                Durant ce stage, j'ai été chargé de développer une <strong>application de Gestion Électronique de Documents (GED)</strong>
+                destinée à centraliser et sécuriser les documents internes de l'entreprise.
+              </p>
+
+              <h3 class="option-subtitle">Contexte et objectifs</h3>
+              <p>
+                L'entreprise utilisait jusqu'alors des solutions fragmentées pour le stockage documentaire, ce qui posait des problèmes
+                de traçabilité, de sécurité et d'accès. Le besoin était de créer une plateforme unique permettant de :
+              </p>
+              <ul class="list">
+                <li>Centraliser tous les documents de l'entreprise (techniques, administratifs, commerciaux)</li>
+                <li>Gérer finement les droits d'accès selon les rôles des utilisateurs</li>
+                <li>Assurer la sécurité des données sensibles</li>
+                <li>Faciliter la recherche et l'organisation des fichiers</li>
+                <li>Garantir la conformité avec les exigences RGPD</li>
+              </ul>
+
+              <h3 class="option-subtitle">Stack technique</h3>
+              <div class="skills-grid">
+                <div class="skill-bubble visible"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /><span>HTML5</span></div>
+                <div class="skill-bubble visible"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /><span>CSS3</span></div>
+                <div class="skill-bubble visible"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><span>JavaScript</span></div>
+                <div class="skill-bubble visible"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" /><span>PHP</span></div>
+                <div class="skill-bubble visible"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /><span>MySQL</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Déroulement semaine par semaine -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Déroulement du stage</h2>
+
+              <h3 class="option-subtitle">Semaine 1 — Authentification sécurisée</h3>
+              <ul class="list">
+                <li>Découverte de l'entreprise, des locaux et de l'environnement de travail</li>
+                <li>Étude des mécanismes d'authentification sécurisée</li>
+                <li>Mise en place de l'authentification à deux facteurs (2FA) via code OTP</li>
+                <li>Implémentation du hashage et salage des mots de passe avec l'algorithme bcrypt</li>
+                <li>Définition de la politique de mots de passe robuste</li>
+              </ul>
+
+              <h3 class="option-subtitle">Semaine 2 — Base de données et rôles</h3>
+              <ul class="list">
+                <li>Connexion et configuration de MySQL</li>
+                <li>Création des tables <code>users</code> et <code>clients</code></li>
+                <li>Mise en place d'un système de gestion des rôles (administrateur / utilisateur)</li>
+                <li>Migration de HTTP vers HTTPS via la configuration IIS</li>
+                <li>Sécurisation des échanges avec certificat SSL</li>
+              </ul>
+
+              <h3 class="option-subtitle">Semaine 3 — Virtualisation et tests de déploiement</h3>
+              <ul class="list">
+                <li>Installation et configuration d'Oracle VM VirtualBox</li>
+                <li>Reproduction de l'environnement de développement complet dans une machine virtuelle</li>
+                <li>Tests de déploiement pour valider la portabilité de l'application</li>
+                <li>Vérification du bon fonctionnement en environnement isolé</li>
+              </ul>
+
+              <h3 class="option-subtitle">Semaine 4 — Finalisation GED + Application note de frais</h3>
+              <ul class="list">
+                <li>Finalisation et mise en production de l'application GED</li>
+                <li>Développement d'une application de gestion des notes de frais avec les champs :
+                  <ul class="list" style="margin-top: var(--space-1)">
+                    <li>Date, type de dépense, statut de remboursement</li>
+                    <li>Description, montant TTC et montant HT</li>
+                  </ul>
+                </li>
+                <li>Tests d'intégration et corrections de bugs</li>
+              </ul>
+
+              <h3 class="option-subtitle">Semaine 5 — Finalisation et découvertes</h3>
+              <ul class="list">
+                <li>Finalisation de l'application de gestion des notes de frais</li>
+                <li>Rédaction de la documentation technique et utilisateur</li>
+                <li>Initiation à l'électronique via un projet Arduino</li>
+                <li>Participation à une présentation de Creality (solutions d'impression 3D)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fonctionnalités GED -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Fonctionnalités développées</h2>
+
+              <div class="grid-2">
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">🔐 Authentification sécurisée</h3>
+                    <ul class="list">
+                      <li>Authentification à deux facteurs (2FA) via OTP</li>
+                      <li>Hashage et salage des mots de passe (bcrypt)</li>
+                      <li>Politique de mots de passe robuste</li>
+                      <li>Gestion des sessions sécurisées</li>
+                      <li>Déconnexion automatique après inactivité</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">👥 Gestion des utilisateurs et rôles</h3>
+                    <ul class="list">
+                      <li>Système de rôles hiérarchiques (Administrateur / Utilisateur)</li>
+                      <li>Création et modification de profils utilisateurs</li>
+                      <li>Attribution granulaire de permissions par rôle</li>
+                      <li>Journalisation des actions pour l'audit</li>
+                      <li>Gestion des droits d'accès au niveau fichier et dossier</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">📁 Gestion documentaire</h3>
+                    <ul class="list">
+                      <li>Upload de fichiers avec validation de type et taille</li>
+                      <li>Organisation en arborescence avec dossiers et sous-dossiers</li>
+                      <li>Système de tags et métadonnées</li>
+                      <li>Versioning des documents avec historique des modifications</li>
+                      <li>Téléchargement individuel ou en lot</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="option-card">
+                  <div class="card-inner">
+                    <h3 class="option-title">💸 Gestion des notes de frais</h3>
+                    <ul class="list">
+                      <li>Saisie des dépenses (date, type, description)</li>
+                      <li>Calcul automatique TTC / HT</li>
+                      <li>Suivi du statut de remboursement</li>
+                      <li>Tableau de bord récapitulatif</li>
+                      <li>Export des données</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Difficulté majeure -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Défi majeur rencontré</h2>
+
+              <div class="timeline-note" style="margin-bottom: var(--space-3)">
+                <strong>Problème : Connexion impossible à la base de données</strong><br>
+                Lors de la configuration initiale, l'application ne parvenait pas à joindre le serveur MySQL.
+              </div>
+              <p>
+                <strong>Analyse :</strong> Le problème provenait d'un défaut de résolution DNS locale — le nom d'hôte
+                du serveur n'était pas reconnu sur le réseau interne.
+              </p>
+              <p>
+                <strong>Solution :</strong> Modification manuelle du fichier <code>hosts</code> de la machine pour
+                associer le nom d'hôte à l'adresse IP locale du serveur. Cette résolution m'a permis de mieux comprendre
+                le fonctionnement du réseau local et des mécanismes de résolution DNS.
+              </p>
+            </div>
+          </div>
+
+          <!-- Compétences développées -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Compétences développées</h2>
+
+              <div class="grid-2">
+                <div>
+                  <h3 class="option-subtitle">Compétences techniques</h3>
+                  <ul class="list">
+                    <li>Développement web full-stack (HTML / CSS / JS / PHP)</li>
+                    <li>Sécurisation d'application (2FA, HTTPS, bcrypt)</li>
+                    <li>Gestion de base de données MySQL</li>
+                    <li>Configuration serveur IIS</li>
+                    <li>Virtualisation d'environnement (VirtualBox)</li>
+                    <li>Résolution de problèmes réseau (DNS, fichier hosts)</li>
+                    <li>Rédaction de documentation technique</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="option-subtitle">Compétences transversales</h3>
+                  <ul class="list">
+                    <li>Gestion de projet et respect des délais</li>
+                    <li>Autonomie et résolution de problèmes</li>
+                    <li>Adaptation à un environnement professionnel</li>
+                    <li>Communication avec le maître de stage</li>
+                    <li>Curiosité technique (Arduino, impression 3D)</li>
+                    <li>Rédaction de rapports et documentation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bilan -->
+          <div class="card fade section-gap-top">
+            <div class="card-inner">
+              <h2 class="card-title">Bilan et apports du stage</h2>
+              <p>
+                Ce stage chez Oxycad a été une expérience très professionnalisante qui m'a permis de participer
+                à un projet réel d'entreprise, de la conception jusqu'à la mise en production. J'ai particulièrement apprécié :
+              </p>
+              <ul class="list">
+                <li>
+                  <strong>L'expérience complète</strong> : développement, sécurisation, déploiement et gestion d'infrastructure,
+                  tout a été abordé au cours de ces 5 semaines.
+                </li>
+                <li>
+                  <strong>La dimension sécurité</strong> : la mise en place de la 2FA et du HTTPS m'a sensibilisé à
+                  l'importance cruciale de la cybersécurité dans les applications professionnelles.
+                </li>
+                <li>
+                  <strong>L'impact concret</strong> : l'application GED et l'outil de gestion des notes de frais sont
+                  directement utilisés par l'entreprise au quotidien.
+                </li>
+                <li>
+                  <strong>La diversité des missions</strong> : en plus du développement web, j'ai eu la chance de
+                  toucher à l'électronique (Arduino) et à l'impression 3D (Creality).
+                </li>
+              </ul>
+
+              <div class="timeline-note" style="margin-top: var(--space-3)">
+                <strong>Point d'amélioration :</strong> Mieux anticiper les problèmes d'infrastructure réseau
+                dès la phase de conception pour éviter des blocages en cours de développement.
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-row section-gap-top">
+            <a href="experiences.html" class="button primary">← Retour aux expériences</a>
+            <a href="stage-straformation.html" class="button">Stage StraFormation</a>
+            <a href="contact.html" class="button">Me contacter</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Zimmermann Maël</span>
+        <a href="contact.html">Me contacter</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stage Oxycad — Portfolio Zimmermann Maël</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">MZ</span>
+          <span>Maël Zimmermann</span>
+        </a>
+
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="competences.html">Compétences</a>
+          <a href="experiences.html">Expériences</a>
+          <a href="projets.html">Projets</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="veille-techno.html">Veille Techno</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <a href="experiences.html" class="button" style="margin-bottom: var(--space-4)">← Retour aux expériences</a>
           
           <h1 class="section-title fade">Stage — Oxycad</h1>
           
