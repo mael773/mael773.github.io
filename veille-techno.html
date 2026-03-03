@@ -1,1 +1,140 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Portfolio Zimmermann Maël</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
 
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">MZ</span>
+          <span>Maël Zimmermann</span>
+        </a>
+
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="competences.html">Compétences</a>
+          <a href="experiences.html">Expériences</a>
+          <a href="projets.html">Projets</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="veille-techno.html">Veille Techno</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title fade">Contact</h1>
+
+          <div class="grid-2">
+
+            <!-- Formulaire -->
+            <div class="card fade">
+              <div class="card-inner">
+                <h2 class="card-title">Formulaire</h2>
+                <!--
+                  Le formulaire utilise mailto: pour ouvrir directement
+                  le client mail de l'utilisateur avec le message pré-rempli.
+                  Aucun serveur nécessaire.
+                -->
+                <form action="mailto:zimmermannmael@gmail.com" method="post" enctype="text/plain" novalidate id="contact-form">
+                  <div style="display: grid; gap: 12px">
+
+                    <label>
+                      <span style="display:block; color: var(--muted); margin-bottom: 6px">Nom</span>
+                      <input
+                        required
+                        name="Nom"
+                        type="text"
+                        placeholder="Votre nom"
+                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);"
+                      />
+                    </label>
+
+                    <label>
+                      <span style="display:block; color: var(--muted); margin-bottom: 6px">Email</span>
+                      <input
+                        required
+                        name="Email"
+                        type="email"
+                        placeholder="votre@email.com"
+                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);"
+                      />
+                    </label>
+
+                    <label>
+                      <span style="display:block; color: var(--muted); margin-bottom: 6px">Message</span>
+                      <textarea
+                        required
+                        name="Message"
+                        rows="5"
+                        placeholder="Votre message..."
+                        style="width:100%; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text); resize: vertical;"
+                      ></textarea>
+                    </label>
+
+                    <button class="button primary" type="submit">Envoyer</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Liens directs -->
+            <div class="card fade">
+              <div class="card-inner">
+                <h2 class="card-title">Liens directs</h2>
+
+                <div class="cta-row" style="margin-top: var(--space-2); flex-direction: column; align-items: flex-start; gap: var(--space-2)">
+
+                  <a class="button" href="mailto:zimmermannmael@gmail.com">
+                    ✉️ zimmermannmael@gmail.com
+                  </a>
+
+                  <!--
+                    ============================================================
+                    LINKEDIN : remplace l'URL ci-dessous par la tienne.
+                    Pour la trouver :
+                      1. Ouvre LinkedIn et connecte-toi
+                      2. Clique sur "Voir le profil"
+                      3. Copie l'URL dans la barre d'adresse
+                         (ex : https://www.linkedin.com/in/mael-zimmermann/)
+                      4. Colle-la à la place du # ci-dessous
+                    ============================================================
+                  -->
+                  <a class="button" href="https://www.linkedin.com/in/TON-PROFIL-ICI" target="_blank" rel="noopener noreferrer">
+                    🔗 LinkedIn
+                  </a>
+
+                </div>
+
+                <div class="timeline-note" style="margin-top: var(--space-4)">
+                  <strong>Disponibilité :</strong> Je réponds généralement sous 24 à 48 h.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Zimmermann Maël</span>
+        <a href="contact.html">Me contacter</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
